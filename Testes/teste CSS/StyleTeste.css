@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: auto;
+    top:0;
+    position: relative;
+}
+
+/*NAV*/
+.Nav_LOL{
+    left: 0;
+    border-bottom:1px solid black     ; 
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: blue;
+    padding: 15px;
+    width: 100%;
+}
+
+.Nav_Titulo{
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.Nav_List{
+    list-style: none;
+    display: flex;
+}
+
+.Nav_List > li > a{
+    padding-left: 50px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* FIM NAV */
+
+.Descricao_background{
+    background-image: url(../ImageTeste/content-original-runeterra-ionia-3af5494dd645cb673dc4cedc2d3458b1.jpg);
+    
+}
+
+.Logo{
+    max-width: 500px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    margin-bottom:-40px ;
+    margin-left: -10px;
+
+}
+
+.Descricao_paragrafo{
+    color: white;
+    font-size: 30px;
+    margin: 15px;  
+    width: 50%;
+    text-align-last: justify;
+}
+
+.Descricao_titulo{
+    font-size: 50px;
+    font-family: "Sofadi One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 15px;
+  margin-bottom: -10px;
+}
+
+
