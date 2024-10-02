@@ -134,10 +134,10 @@ section {
 .Habilidades_Li {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px;
 }
 
 .Habilidades_Li>li {
     list-style-position: inside;
     padding-left: 30px;
+    line-height: 30px;
 }
