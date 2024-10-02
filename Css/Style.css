@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 
+
     /* deixa toda a pagina com margem 0 evitando linhas estranhas na borda */
 }
 
@@ -128,4 +129,15 @@ section {
     background-color: #d5deed;
     /* Cor de fundo leve para diferenciar as seções */
 
+}
+
+.Habilidades_Li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
+}
+
+.Habilidades_Li>li {
+    list-style-position: inside;
+    padding-left: 30px;
 }
