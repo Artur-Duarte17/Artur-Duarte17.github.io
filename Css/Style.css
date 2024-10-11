@@ -72,6 +72,7 @@ a {
     text-decoration-color: rgb(182, 174, 253);
     /* muda a cor da decoração*/
 
+
 }
 
 /*Faz ações quando passa o mouse encima*/
@@ -129,7 +130,11 @@ section {
     background-color: #d5deed;
     /* Cor de fundo leve para diferenciar as seções */
 
+
 }
+
+
+
 
 .Habilidades_Li {
     display: grid;
@@ -140,4 +145,5 @@ section {
     list-style-position: inside;
     padding-left: 30px;
     line-height: 30px;
+    /*altera o espaçamento entre linhas do texto*/
 }
