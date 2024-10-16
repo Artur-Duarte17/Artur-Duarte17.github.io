@@ -1,149 +1,151 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
-
-    /* deixa toda a pagina com margem 0 evitando linhas estranhas na borda */
 }
 
-
-
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+    line-height: 1.6;
+}
 
 header {
-    width: 100%;
-    height: auto;
-    top: 0;
-    position: relative;
+    text-align: center;
+    padding: 60px 0;
+    background-color: #000;
+    background-image: url(../image/tecnologia-abstrata-design-digital_1077802-331660.jpg);
+    background-size: cover;
 }
 
-html {
-    scroll-behavior: smooth;
-    /*Faz com que quando clicar no link dessa devagar*/
-}
-
-a {
-    transition: all 300ms ease;
-    /*Faz as trasições ficarem mais suave */
-}
-
-/*NAV*/
-.Nav_Top {
-    left: 0;
-    border-bottom: 1px solid black;
-    position: fixed;
+nav ul {
     display: flex;
-    /*faz o objeto ocupar so o que precisa*/
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-download,
+.btn-learn-more,
+.btn-play-video {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn-learn-more:hover,
+.btn-play-video:hover {
+    background-color: #d62828;
+}
+
+.hero {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.highlight {
+    color: #e63946;
+}
+
+.about {
+    padding: 50px 0;
+    background-color: #202020;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    color: white;
-    background-color: blue;
-    padding: 15px;
-    width: 100%;
+    padding: 0 20px;
 }
 
-.Nav_Titulo>a {
-    cursor: default;
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-
+.profile-pic {
+    width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.Nav_List {
-    font-size: 20px;
+.about-text {
+    max-width: 500px;
+}
+
+.about-text ul {
     list-style: none;
+    margin-top: 20px;
+}
+
+.about-text ul li {
+    margin: 10px 0;
+}
+
+.education {
+    background-color: #1a1a1a;
+    padding: 50px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #e63946;
+    margin-bottom: 30px;
+}
+
+.timeline {
     display: flex;
-    gap: 5rem;
-}
-
-.Nav_List>li>a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-
-}
-
-.Nav_List>li>a:hover {
-    color: rgb(136, 204, 243);
-    text-decoration: underline;
-    /* muda a cor do texto*/
-    text-decoration-color: rgb(182, 174, 253);
-    /* muda a cor da decoração*/
-
-
-}
-
-/*Faz ações quando passa o mouse encima*/
-
-/* FIM NAV */
-
-main {
-    padding-top: 4%;
-    max-width: 1100px;
-    /* Largura máxima do conteúdo */
+    flex-direction: column;
+    max-width: 800px;
     margin: 0 auto;
-    /* 0 signfica que a margem superior e inferior do elemento será 0 (não haverá espaçamento acima ou abaixo do elemento)
-                      auto significa que a margem esquerda e direita será ajustada automaticamente para que o elemento seja centralizado horizontalmente na página. */
 }
 
-p {
-    text-align: justify;
+.timeline-item {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e63946;
 }
 
-/* Estilos para as seções */
-
-.Apresentacao_container {
-    display: flex;
+.skills {
+    background-color: #202020;
+    padding: 50px 0;
 }
 
-.Apresentacao_container>p {
-    padding-top: 2%;
-    padding-left: 1%;
+.skills-list {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.Apresentacao_img {
-
-    display: inline;
-    width: 150px;
-    height: 150px;
-    border-radius: 5%;
-    object-fit: cover;
-    /* Define que a imagem deve cobrir completamente o contêiner (nesse caso, o espaço de 150x150px), sem distorção. */
-    margin: 1rem auto;
-    border: 2px solid #333;
-    /* Adiciona uma borda sólida de 2 pixels ao redor da imagem */
-
-
+.skill {
+    margin-bottom: 20px;
 }
 
-section {
-    margin-bottom: 2rem;
-    /* Espaçamento entre as seções */
-    border-radius: 8px;
-    /* Bordas arredondadas */
-    padding: 2rem;
-    /* Espaçamento interno das seções */
-    border-bottom: 10px solid #bbbbbd;
-    /* Linha divisória/sombra fake na parte inferior da seção */
-    background-color: #d5deed;
-    /* Cor de fundo leve para diferenciar as seções */
-
-
+.skill p {
+    margin-bottom: 5px;
 }
 
-
-
-
-.Habilidades_Li {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.progress-bar {
+    height: 10px;
+    background-color: #e63946;
+    border-radius: 5px;
 }
 
-.Habilidades_Li>li {
-    list-style-position: inside;
-    padding-left: 30px;
-    line-height: 30px;
-    /*altera o espaçamento entre linhas do texto*/
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
 }

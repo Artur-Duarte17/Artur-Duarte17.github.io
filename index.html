@@ -1,91 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio </title>
-    <link href="Css/Style.css" rel="stylesheet">
-    <!-- <link href="Fontes/SofadiOne-Regular.ttf" rel="stylesheet"> -->
-
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="Css/Style.css">
+</head>
 
 <body>
-
     <header>
-        <nav class="Nav_Top">
-            <div class="Nav_Titulo">
-                <a href="#">
-                    <h1>MINHA CARREIRA</h1>
-                </a>
-            </div>
-
-            <ul class="Nav_List">
-                <li><a href="#teste">Meu estilo de jogo</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Portfolio</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Sobre mim</a></li>
+                <li><a href="#">Loja</a></li>
             </ul>
-
         </nav>
+        <div class="hero">
+            <h1>Eu sou <span class="highlight">Desenvolvedor</span> Artur Duarte</h1>
+            <p>Sou um dos desenvolvedores mais conhecido do IF Goiano, tendo feito contribuições notáveis na área de
+                design e desenvolvimento.</p>
+            <a href="#" class="btn-learn-more">Saber Mais</a>
+            <a href="#" class="btn-play-video">Assistir Vídeo</a>
+        </div>
     </header>
 
-
-    <main>
-        <section id="Apresentacao">
-            <h1>Sobre Mim</h1>
-            <hr />
-            <div class="Apresentacao_container">
-                <figure>
-                    <img class="Apresentacao_img" src="image/UniversalUpscaler_a46eaa7a-4ee7-4341-9010-4abed5f44cca.jpg"
-                        alt="Foto Axé" />
-                </figure>
+    <section id="about" class="about">
+        <div class="container">
+            <img src="image/Developer.jpeg" alt="Developer Photo" class="profile-pic">
+            <div class="about-text">
+                <h2>Por que me escolher para seu projeto?</h2>
                 <p>
-                    Sou estudante de Sistemas de Informação em uma faculdade federal, atualmente no quarto período, com
-                    foco no desenvolvimento de habilidades em programação. Tenho conhecimentos em Java, HTML, CSS, e
-                    JavaScript, além de estar aprendendo sobre bancos de dados. Meu objetivo é dominar essas tecnologias
-                    para criar aplicativos e sites, buscando me aperfeiçoar continuamente. Estou desenvolvendo projetos
-                    para construir um portfólio sólido e busco oportunidades de estágio que me permitam crescer na área,
-                    com a ambição de trabalhar internacionalmente em uma economia mais estável.a
+                    Programador iniciante e facilmente moldável para a empresa.
                 </p>
+                <ul>
+                    <li><strong>Data de nascimento:</strong> 17 de Agosto de 2004</li>
+                    <li><strong>Nacionalidade:</strong> Caldas Novas, Bostil</li>
+                    <li><strong>Email:</strong> monteiroarturduarte@gmail.com</li>
+                </ul>
+                <a href="#" class="btn-download">Download Curriculo </a>
+                <!-- aprender um jeito de colocar para baixar documento pdf -->
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="Habilidades">
-            <h1>Habilidades</h1>
-            <hr>
-            <ul class="Habilidades_Li">
-                <li>Boa comunicação verbal com equipes, clientes e parceiros </li>
-                <li>Capacidade de se adaptar</li>
-                <li>Conhecimentos em Pacote Office com ênfase em Word e Excel</li>
-                <li>Familiaridade com novas tecnologias </li>
-                <li>Familiaridade com rotinas administrativas e burocráticas </li>
-                <li>Habilidades de apresentação</li>
-                <li>Identificação e resolução de problemas </li>
-                <li>Resolução de conflitos</li>
-                <li>Tomada de decisões baseada em dados</li>
-            </ul>
+    <section id="education" class="education">
+        <h2>Educação</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Diploma ensino médio</h3>
+                <p>2019 - 2021</p>
+                <p>Era o nerd da sala de disciplinas exatas, reconhecido por sua notável dedicação e por manter uma
+                    média geral de notas igual ou superior a 8.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Sistema de informação</h3>
+                <p>2022 - 2026</p>
+                <p>Se passei na federal imagina o que posso fazer na sua empresa. Confia ia mentir para que?</p>
+            </div>
+        </div>
+    </section>
 
+    <section id="skills" class="skills">
+        <h2>Minhas Habilidades</h2>
+        <div class="skills-list">
+            <div class="skill">
+                <p>Liderança</p>
+                <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <div class="skill">
+                <p>Java</p>
+                <div class="progress-bar" style="width: 65%;"></div>
+            </div>
+            <div class="skill">
+                <p>Banco de dados</p>
+                <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <div class="skill">
+                <p>Web Design</p>
+                <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+            <div class="skill">
+                <p>Paciência</p>
+                <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+            <div class="skill">
+                <p>Fodatilidade</p>
+                <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+            <!-- pensar onde colocar as porcentagens -->
+        </div>
+    </section>
 
-        </section>
-
-        <section>
-            <h1>Projetos</h1>
-            <hr>
-
-
-        </section>
-
-
-
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <p id="teste">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-
+    <footer>
+        <p>"Dizem que beleza cansa mas, estou sempre cansado e nada belo" - Artur 2023</p>
+    </footer>
 </body>
 
 </html>
