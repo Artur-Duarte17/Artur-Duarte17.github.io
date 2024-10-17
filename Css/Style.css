@@ -7,16 +7,20 @@
 body {
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background-color: #1a1a1a;
+    background-color: #202020;
     line-height: 1.6;
 }
 
-header {
+.portfolio-header {
     text-align: center;
-    padding: 60px 0;
     background-color: #000;
     background-image: url(../image/tecnologia-abstrata-design-digital_1077802-331660.jpg);
     background-size: cover;
+}
+
+header {
+    padding: 20px 0;
+
 }
 
 nav ul {
@@ -71,10 +75,17 @@ nav ul li a {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    /* Centraliza os itens */
     align-items: center;
     padding: 0 20px;
-    /* Dar um jeito de n almenter o espaço em grandes resoluçoes */
+    /* text-align: center; */
+    max-width: 80vw;
+    /* Define um limite máximo de largura */
+    margin: 0 auto;
+    /* Centraliza o contêiner na página */
+    gap: 20px;
+    /* Define o espaço entre os itens */
 }
 
 .profile-pic {
@@ -142,6 +153,8 @@ h2 {
     height: 20px;
     background-color: #e63946;
     border-radius: 5px;
+    text-align: end;
+
 }
 
 footer {
@@ -149,3 +162,4 @@ footer {
     padding: 20px 0;
     background-color: #000;
 }
+
