@@ -150,11 +150,13 @@ h2 {
 }
 
 .progress-bar {
+    display: flex;
     height: 20px;
     background-color: #e63946;
     border-radius: 5px;
-    text-align: end;
-
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
 }
 
 footer {
@@ -162,4 +164,3 @@ footer {
     padding: 20px 0;
     background-color: #000;
 }
-
