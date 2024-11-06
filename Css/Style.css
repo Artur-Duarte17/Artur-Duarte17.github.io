@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    /* background-color: #202020; */
+    line-height: 1.6;
+}
+
+.portfolio-header {
+    text-align: center;
+    background-color: #000;
+    background-image: url(../image/tecnologia-abstrata-design-digital_1077802-331660.jpg);
+    background-size: cover;
+}
+
+header {
+    padding: 20px 0;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    padding: 0 3vw;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-download,
+.btn-learn-more,
+.btn-play-video {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn-learn-more:hover,
+.btn-play-video:hover {
+    background-color: #d62828;
+}
+
+.hero {
+    max-width: 600px;
+    margin: auto;
+}
+
+.highlight {
+    color: #e63946;
+}
+
+.about {
+    padding: 50px 0;
+    background-color: #202020;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80vw;
+    /* Define um limite máximo de largura */
+    margin: 0 auto;
+    /* Centraliza o contêiner na página */
+    gap: 20px;
+    /* Define o espaço entre os itens */
+}
+
+.profile-pic {
+    /* width: 300px; */
+    min-width: 300px;
+    width: 20vw;
+    border-radius: 10%;
+    align-self: flex-start;
+}
+
+.about-text {
+    max-width: 50vw;
+    text-align: justify;
+}
+
+.about-text ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-text ul li {
+    margin: 5px 0;
+}
+
+.education {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #e63946;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #e63946;
+}
+
+.service {
+    background-color: #202020;
+    margin: 0 auto;
+}
+
+.table-service {
+    background-color: #333;
+}
+
+.skills {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+
+.skills-list {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    display: flex;
+    height: 20px;
+    background-color: #e63946;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+}
+
+@media ((max-width: 600px)) {
+    .profile-pic {
+        display: none;
+    }
+}

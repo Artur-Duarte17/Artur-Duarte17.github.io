@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+    /* deixa toda a pagina com margem 0 evitando linhas estranhas na borda */
+}
+
+
+
+
+header {
+    width: 100%;
+    height: auto;
+    top: 0;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*Faz com que quando clicar no link dessa devagar*/
+}
+
+a {
+    transition: all 300ms ease;
+    /*Faz as trasições ficarem mais suave */
+}
+
+/*NAV*/
+.Nav_Top {
+    left: 0;
+    border-bottom: 1px solid black;
+    position: fixed;
+    display: flex;
+    /*faz o objeto ocupar so o que precisa*/
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: blue;
+    padding: 15px;
+    width: 100%;
+}
+
+.Nav_Titulo>a {
+    cursor: default;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+
+}
+
+.Nav_List {
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+}
+
+.Nav_List>li>a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.Nav_List>li>a:hover {
+    color: rgb(136, 204, 243);
+    text-decoration: underline;
+    /* muda a cor do texto*/
+    text-decoration-color: rgb(182, 174, 253);
+    /* muda a cor da decoração*/
+
+
+}
+
+/*Faz ações quando passa o mouse encima*/
+
+/* FIM NAV */
+
+main {
+    padding-top: 4%;
+    max-width: 1100px;
+    /* Largura máxima do conteúdo */
+    margin: 0 auto;
+    /* 0 signfica que a margem superior e inferior do elemento será 0 (não haverá espaçamento acima ou abaixo do elemento)
+                      auto significa que a margem esquerda e direita será ajustada automaticamente para que o elemento seja centralizado horizontalmente na página. */
+}
+
+p {
+    text-align: justify;
+}
+
+/* Estilos para as seções */
+
+.Apresentacao_container {
+    display: flex;
+}
+
+.Apresentacao_container>p {
+    padding-top: 2%;
+    padding-left: 1%;
+}
+
+.Apresentacao_img {
+
+    display: inline;
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    object-fit: cover;
+    /* Define que a imagem deve cobrir completamente o contêiner (nesse caso, o espaço de 150x150px), sem distorção. */
+    margin: 1rem auto;
+    border: 2px solid #333;
+    /* Adiciona uma borda sólida de 2 pixels ao redor da imagem */
+
+
+}
+
+section {
+    margin-bottom: 2rem;
+    /* Espaçamento entre as seções */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    padding: 2rem;
+    /* Espaçamento interno das seções */
+    border-bottom: 10px solid #bbbbbd;
+    /* Linha divisória/sombra fake na parte inferior da seção */
+    background-color: #d5deed;
+    /* Cor de fundo leve para diferenciar as seções */
+
+
+}
+
+
+.Habilidades_Li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Habilidades_Li>li {
+    list-style-position: inside;
+    padding-left: 30px;
+    line-height: 30px;
+    /*altera o espaçamento entre linhas do texto*/
+}
