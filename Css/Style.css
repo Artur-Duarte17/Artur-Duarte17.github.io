@@ -51,6 +51,7 @@ nav ul li a {
     border-radius: 5px;
     margin: 10px;
     display: inline-block;
+    text-align: center;
 }
 
 .btn-learn-more:hover,
@@ -136,9 +137,7 @@ h2 {
     margin: 0 auto;
 }
 
-.table-service {
-    background-color: #333;
-}
+
 
 .skills {
     background-color: #1a1a1a;
@@ -172,6 +171,44 @@ footer {
     text-align: center;
     padding: 20px 0;
     background-color: #000;
+}
+
+/* Centraliza o contêiner */
+.list-service {
+    max-width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 30vw;
+
+}
+
+.list-service,
+ul {
+    list-style: none;
+
+}
+
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    list-style: none;
+
+}
+
+/* Estilo das listas dentro de cada coluna */
+.left-column li,
+.right-column li {
+    text-align: center;
+    padding: calc(1vw + 5px);
+    /* Responsivo: aumenta ou diminui o espaçamento conforme o tamanho da tela */
+}
+
+/* Linha vertical entre as colunas */
+.left-column {
+    border-right: 2px solid whitesmoke;
 }
 
 @media ((max-width: 600px)) {
