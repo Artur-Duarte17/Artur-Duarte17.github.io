@@ -23,6 +23,15 @@ header {
 
 }
 
+.button-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -197,7 +206,8 @@ ul {
 
 }
 
-.right-column li {
+.right-column li,
+.left-column li {
     text-align: center;
     padding: calc(1vw + 5px);
 }
@@ -206,8 +216,38 @@ ul {
     border-right: 2px solid whitesmoke;
 }
 
-@media ((max-width: 600px)) {
+
+
+@media (max-width: 768px) {
     .profile-pic {
         display: none;
     }
+
+    .button-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #333;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+
+
 }
