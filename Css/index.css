@@ -1,0 +1,326 @@
+/* ========== RESET GERAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    /* Cor padrão do texto */
+    line-height: 1.6;
+    margin-top: 30px;
+    /* Espaço superior para compensar o nav fixo */
+}
+
+/* ========== HEADER E NAVEGAÇÃO ========== */
+
+/* Estiliza o cabeçalho geral */
+.portfolio-header {
+    text-align: center;
+    background-size: cover;
+    background-color: #000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    position: relative;
+    padding-right: 35px;
+}
+
+/* Navegação fixa */
+nav {
+    background: linear-gradient(to right, #333, #444);
+    /* Gradiente no fundo */
+    padding: 5px 0;
+    /* Espaçamento interno */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra para destaque */
+    position: fixed;
+    /* Fixa a navegação no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ocupa toda a largura */
+    z-index: 1000;
+    /* Mantém acima do restante */
+}
+
+/* Botão hamburguer (menu mobile) */
+.button-toggle {
+    display: none;
+    /* Padrão: invisível */
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Lista de navegação */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 0 15px;
+    /* Espaçamento horizontal entre os links */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    /* Área clicável */
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* Suaviza o hover */
+}
+
+.nav-links a:hover {
+    background-color: #e63946;
+    /* Fundo vermelho no hover */
+    color: #fff;
+}
+
+/* ========== HERO SECTION ========== */
+
+.hero {
+    margin: auto;
+    max-width: 80vw;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.highlight {
+    color: #e63946;
+    /* Destaca palavras específicas */
+}
+
+.btn-learn-more,
+.btn-play-video {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-learn-more:hover,
+.btn-play-video:hover {
+    background-color: #b5171a;
+    transform: scale(1.05);
+    /* Aumenta levemente ao passar o mouse */
+}
+
+/* ========== SEÇÃO SOBRE MIM ========== */
+
+.about {
+    padding: 50px 0;
+    background-color: #202020;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80vw;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.profile-pic {
+    min-width: 300px;
+    width: 20vw;
+    border-radius: 10%;
+    align-self: flex-start;
+}
+
+.about-text {
+    max-width: 50vw;
+    text-align: justify;
+}
+
+.about-text ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-text ul li {
+    margin: 5px 0;
+}
+
+.btn-download {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-download:hover {
+    background-color: #b5171a;
+}
+
+/* ========== SEÇÃO EDUCAÇÃO ========== */
+
+.education {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #e63946;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #e63946;
+}
+
+/* ========== SEÇÃO SERVIÇOS ========== */
+
+.service {
+    background-color: #202020;
+    padding: 20px 0;
+}
+
+.list-service {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.left-column {
+    border-right: 2px solid whitesmoke;
+    /* Divisão vertical */
+}
+
+.list-service li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* ========== SEÇÃO HABILIDADES ========== */
+
+.skills {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+
+.skills-list {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    display: flex;
+    height: 20px;
+    background-color: #e63946;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: #fff;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media (max-width: 768px) {
+
+    body {
+        margin-top: 0px;
+    }
+
+    /* Mostra o botão hamburguer */
+    .button-toggle {
+        display: block;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+
+    /* Esconde o menu */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        z-index: 5;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .profile-pic {
+        display: none;
+        /* Esconde a imagem */
+    }
+
+    .about-text {
+        max-width: 90%;
+        text-align: center;
+    }
+}

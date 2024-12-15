@@ -1,90 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio </title>
-    <link href="teste CSS/StyleTeste.css" rel="stylesheet">
-    <!-- <link href="Fontes/SofadiOne-Regular.ttf" rel="stylesheet"> -->
-
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="teste CSS/StyleTeste.css">
+</head>
 
 <body>
 
-    <header>
-        <nav class="Nav_Top">
-            <div class="Nav_Titulo">
-                <a href="#">
-                    <h1>MINHA CARREIRA</h1>
-                </a>
-            </div>
+    <header class="portfolio-header">
+        <nav>
+            <button id="button-toggle" class="button-toggle" aria-label="Abrir menu">
+                &#9776;
+            </button>
 
-            <ul class="Nav_List">
-                <li><a href="#teste">Meu estilo de jogo</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="src/evento.html">Eventos</a></li>
+                <li><a href="src/pessoal.html">Sobre mim</a></li>
+                <li><a href="#">Loja</a></li>
             </ul>
-
         </nav>
+
+        <div class="hero">
+            <h1>Eu sou <span class="highlight">Desenvolvedor</span> Artur Duarte</h1>
+            <p>Desenvolvedor reconhecido no IF Goiano, com contribuições relevantes em design e desenvolvimento de
+                software.</p>
+
+            <a href="src/me.html" class="btn-learn-more">Saber Mais</a>
+            <a href="#" class="btn-play-video">Assistir Vídeo</a>
+        </div>
     </header>
 
+    <section id="about" class="about">
+        <h2>Quem eu sou?</h2>
+        <div class="container">
+            <img class="profile-pic" src="i" alt="Foto do Desenvolvedor">
+            <div class="about-text">
 
-    <main>
-        <section id="Apresentacao">
-            <h1>Sobre Mim</h1>
-            <hr />
-            <div class="Apresentacao_container">
-                <figure>
-                    <img class="Apresentacao_img" src="ImageTeste/UniversalUpscaler_a46eaa7a-4ee7-4341-9010-4abed5f44cca.jpg"
-                        alt="Foto Axé" />
-                </figure>
                 <p>
-                    Sou estudante de Sistemas de Informação em uma faculdade federal, atualmente no quarto período, com
-                    foco no desenvolvimento de habilidades em programação. Tenho conhecimentos em Java, HTML, CSS, e
-                    JavaScript, além de estar aprendendo sobre bancos de dados. Meu objetivo é dominar essas tecnologias
-                    para criar aplicativos e sites, buscando me aperfeiçoar continuamente. Estou desenvolvendo projetos
-                    para construir um portfólio sólido e busco oportunidades de estágio que me permitam crescer na área,
-                    com a ambição de trabalhar internacionalmente em uma economia mais estável.a
+                    Sou desenvolvedor full-stack com experiência acadêmica na área de Sistemas de Informação, onde
+                    desenvolvi uma base sólida em tecnologias como HTML, CSS, JavaScript, Java e PHP, além de
+                    conhecimentos em bancos de dados.
                 </p>
+                <br>
+                <p>
+                    Minha paixão pela solução de problemas e inovação guiou minha participação em projetos
+                    significativos, contribuindo para meu desenvolvimento em programação e design de sistemas.
+                    Mantenho-me atualizado com novas tecnologias e tendências, pronto para atuar em todas as fases do
+                    desenvolvimento de software.
+                </p>
+                <ul>
+                    <li><strong>Data de nascimento:</strong> 17 de Agosto de 2004</li>
+                    <li><strong>Nacionalidade:</strong> Caldas Novas, Brasil</li>
+                    <li><strong>Email:</strong> monteiroarturduarte@gmail.com</li>
+                </ul>
+                <a href="Document/Currículo.pdf" download="Currículo.pdf" class="btn-download">Download Currículo</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="Habilidades">
-            <h1>Habilidades</h1>
-            <hr>
-            <ul class="Habilidades_Li">
-                <li>Boa comunicação verbal com equipes, clientes e parceiros </li>
-                <li>Capacidade de se adaptar</li>
-                <li>Conhecimentos em Pacote Office com ênfase em Word e Excel</li>
-                <li>Familiaridade com novas tecnologias </li>
-                <li>Familiaridade com rotinas administrativas e burocráticas </li>
-                <li>Habilidades de apresentação</li>
-                <li>Identificação e resolução de problemas </li>
-                <li>Resolução de conflitos</li>
-                <li>Tomada de decisões baseada em dados</li>
+    <section id="education" class="education">
+        <h2>Educação</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Diploma Ensino Médio</h3>
+                <p>2019 - 2021</p>
+                <p>Alta dedicação às disciplinas de exatas, com média geral igual ou superior a 8.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Sistema de Informação</h3>
+                <p>2022 - 2026</p>
+                <p>Graduação de Sistemas de Informação na Federal, com foco em desenvolvimento de soluções para
+                    empresas. Fortes habilidades técnicas e compromisso com resultados.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="service">
+        <h2>Serviços</h2>
+        <div class="list-service">
+
+            <ul class="left-column">
+                <li><strong>CONSULTORIA</strong> - Análise e solução personalizada para problemas de software.</li>
+                <li><strong>DESENVOLVIMENTO</strong> - Criação de sites e sistemas sob medida.</li>
+                <li><strong>FRONT-END</strong> - Design visual e experiência do usuário.</li>
+            </ul>
+            <ul class="right-column">
+                <li><strong>SUPORTE</strong> - Assistência técnica para manutenção de sistemas.</li>
+                <li><strong>BACK-END</strong> - Estrutura e segurança de dados.</li>
+                <li><strong>DESIGN</strong> - Criação de interfaces atraentes e funcionais.</li>
             </ul>
 
-
-        </section>
-
-        <section>
-            <h1>Projetos</h1>
-            <hr>
+        </div>
 
 
-        </section>
+    </section>
 
+    <section id="skills" class="skills">
+        <h2>Minhas Habilidades</h2>
+        <div class="skills-list">
 
+            <div class="skill">
+                <p>Liderança</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <p id="teste">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            </div>
+            <div class="skill">
+                <p>Java</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 65%;">65%</div>
+                </div>
+
+            </div>
+            <div class="skill">
+                <p>Banco de Dados</p>
+
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Web Design</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+
+            </div>
+            <div class="skill">
+                <p>Paciência</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 60%;">60%</div>
+                </div>
+
+            </div>
+            <div class="skill">
+                <p>Fodatilidade</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>"Dizem que beleza cansa, mas estou sempre cansado e nada belo" - Artur, 2023</p>
+    </footer>
+
+    <script src="JS teste/Js.js"></script>
 
 </body>
 

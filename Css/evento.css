@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0c0c0c;
+    color: #fff;
+    line-height: 1.6;
+}
+
+nav {
+    background: linear-gradient(to right, #333, #444);
+    /* Gradiente de fundo */
+    padding: 10px 0;
+    /* Espaçamento interno */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra para destaque */
+}
+
+.button-toggle {
+    display: none;
+    /* Oculto por padrão em telas grandes */
+    font-size: 24px;
+    /* Tamanho da fonte para o ícone */
+    color: #fff;
+    /* Cor do texto/ícone */
+    background: none;
+    /* Sem fundo padrão */
+    border: none;
+    /* Remove bordas */
+    cursor: pointer;
+    /* Mostra cursor de clique */
+    position: absolute;
+    /* Posiciona em relação ao pai */
+    top: 10px;
+    /* Distância do topo */
+    right: 10px;
+    /* Distância da borda direita */
+    z-index: 10;
+    /* Garante que esteja acima de outros elementos */
+    background-color: #333;
+    /* Fundo cinza escuro */
+    padding: 5px;
+    /* Espaçamento interno no botão */
+    border-radius: 5px;
+    /* Arredonda os cantos */
+}
+
+.nav-links {
+    display: flex;
+    /* Layout flexível para organizar os itens */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    list-style: none;
+    /* Remove os marcadores de lista */
+}
+
+.nav-links li {
+    padding: 0 15px;
+    /* Espaçamento horizontal entre os links */
+}
+
+.nav-links a {
+    color: #fff;
+    /* Cor branca para o texto */
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+    padding: 10px 15px;
+    /* Adiciona espaço ao redor do texto */
+    font-size: 16px;
+    /* Tamanho do texto */
+    border-radius: 5px;
+    /* Arredonda os cantos do link */
+    transition: background-color 0.3s ease;
+    /* Animação para o hover */
+}
+
+.nav-links a:hover {
+    background-color: #e63946;
+    /* Fundo vermelho ao passar o mouse */
+    color: #fff;
+    /* Garante contraste ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .button-toggle {
+        display: block;
+        /* Mostra o botão hamburguer */
+    }
+
+    .nav-links {
+        display: none;
+        /* Oculta o menu inicialmente */
+        flex-direction: column;
+        /* Organiza os links verticalmente */
+        position: absolute;
+        /* Fixa o menu no topo */
+        top: 0;
+        /* Inicia no topo */
+        left: 0;
+        /* Alinhado à esquerda */
+        width: 100%;
+        /* Ocupa toda a largura da tela */
+        background-color: #333;
+        /* Fundo cinza escuro */
+        padding: 10px 0;
+        /* Espaçamento interno */
+        z-index: 5;
+        /* Sobrepõe outros elementos */
+    }
+
+    .nav-links li {
+        text-align: center;
+        /* Centraliza os links */
+        margin: 10px 0;
+        /* Espaçamento entre os links */
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        /* Aumenta o tamanho dos links em telas menores */
+    }
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Countdown Section */
+.countdown {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #121212;
+}
+
+.countdown h2 {
+    color: #ff007f;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.countdown h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.time-box {
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80px;
+}
+
+.time-box .time {
+    font-size: 1.5rem;
+    color: #ff007f;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #ff007f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ff4fa0;
+}
+
+/* Our Tours Section */
+.our-tours {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #202020;
+}
+
+.our-tours h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.our-tours p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.event .year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff007f;
+}
+
+.event .details h3 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.event .details p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
