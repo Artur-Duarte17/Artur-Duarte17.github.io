@@ -7,9 +7,6 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    color: #fff;
-    /* Cor padrão do texto */
-    line-height: 1.6;
     margin-top: 40px;
     /* Espaço superior para compensar o nav fixo */
 }
@@ -25,9 +22,12 @@ body {
 
 /* Navegação */
 nav {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: space-between; /* Espaço entre título e links */
-    align-items: center; /* Alinha os itens verticalmente */
+    display: flex;
+    /* Ativa o Flexbox */
+    justify-content: space-between;
+    /* Espaço entre título e links */
+    align-items: center;
+    /* Alinha os itens verticalmente */
     background: linear-gradient(to right, #333, #444);
     padding: 10px 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -44,15 +44,19 @@ nav {
     color: lch(70% 50 30);
     font-weight: bold;
     text-transform: uppercase;
-    margin-right: auto; /* Empurra os links para o canto direito */
+    margin-right: auto;
+    /* Empurra os links para o canto direito */
 }
 
 /* Lista de navegação */
 .nav-links {
-    display: flex; /* Links em linha */
-    justify-content: flex-end; /* Alinha os links à direita */
+    display: flex;
+    /* Links em linha */
+    justify-content: flex-end;
+    /* Alinha os links à direita */
     list-style: none;
-    gap: 20px; /* Espaço entre os links */
+    gap: 20px;
+    /* Espaço entre os links */
     margin: 0;
     padding: 0;
 
@@ -94,11 +98,74 @@ nav {
     /* Garante que fique acima do menu */
 }
 
+
+/* ========== SECTION-1 ========== */
+
+.section-1 {
+    color: #fff;
+    background-color: red;
+    margin: 0 auto;
+    text-align: center;
+    width: 90vw;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.h2-section1 {
+    font-family: arial;
+    font-size: 25px;
+    padding-top: 27px;
+}
+
+.p1 {
+    padding-top: 13px;
+    font-family: arial;
+    font-size: 22px;
+}
+
+/* ========== SECTION-2 ========== */
+#section-grid {
+    padding: 10px;
+    height: 10%;
+    padding-bottom: 20px;
+}
+
+.section-2 {
+    background-color: red;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.grid {
+    background-color: none;
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.sub-grid {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
 @media (max-width: 768px) {
 
-    body {
-        margin-top: 0px;
-    }
+
 
     /* Mostra o botão hamburguer */
     .button-toggle {

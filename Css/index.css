@@ -6,12 +6,17 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
     /* Cor padrão do texto */
     line-height: 1.6;
-    margin-top: 30px;
+    margin-top: 40px;
     /* Espaço superior para compensar o nav fixo */
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
 }
 
 /* ========== HEADER E NAVEGAÇÃO ========== */
@@ -30,7 +35,7 @@ body {
 nav {
     background: linear-gradient(to right, #333, #444);
     /* Gradiente no fundo */
-    padding: 5px 0;
+    padding: 10px 0;
     /* Espaçamento interno */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     /* Sombra para destaque */
@@ -213,19 +218,24 @@ h2 {
 }
 
 .list-service {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     gap: 30px;
+    max-width: 80vw;
 }
 
 .left-column,
 .right-column {
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     flex: 1;
+
 }
 
 .left-column {
+    padding-right: 10px;
     border-right: 2px solid whitesmoke;
     /* Divisão vertical */
 }
@@ -264,6 +274,26 @@ h2 {
     justify-content: flex-end;
     padding-right: 10px;
     color: #fff;
+}
+
+/* ========== REDES SOCIAIS ========== */
+
+.social {
+    background-color: #202020;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e63946;
 }
 
 /* ========== FOOTER ========== */
