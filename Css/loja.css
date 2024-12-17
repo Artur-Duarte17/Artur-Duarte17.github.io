@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -252,7 +251,7 @@ nav {
 
 @media only screen and (max-width: 480px) {
     .section-2 {
-        width: 90vw;
+        width: 95vw;
     }
 
     .grid {
