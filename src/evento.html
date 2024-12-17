@@ -1,83 +1,189 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Music Challenge</title>
+    <title>Song Wave - Explore os Maiores Festivais do Mundo</title>
+    <meta name="description"
+        content="Descubra a magia dos maiores festivais de música do mundo com a Song Wave. Junte-se a nós e viva experiências inesquecíveis.">
+    <link rel="icon" href="../image/Icon/icon_evento.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../Css/evento.css">
 </head>
 
 <body>
-    <header class="hero">
-        
-        <div class="container">
-            <h1>OUR TOURS</h1>
+    <!-- HEADER -->
+    <header class="header">
+        <<nav class="navbar">
+            <div class="logo">Song Wave</div>
+            <button class="hamburger" aria-label="Abrir menu">
+                &#9776; <!-- Ícone hambúrguer -->
+            </button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#testemunhos">Depoimentos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <h1>WORLD MUSIC CHALLENGE</h1>
+            <p>Explore a magia dos maiores festivais do mundo</p>
         </div>
     </header>
 
+    <!-- CONTAGEM REGRESSIVA -->
     <section class="countdown">
-        <h2>HURRY UP! BATTLE STARTS SOON</h2>
-        <h1>WORLD MUSIC CHALLENGE</h1>
-        <div class="timer">
-            <div class="time-box">
-                <span class="time">00</span>
-                <span>Days</span>
-            </div>
-            <div class="time-box">
-                <span class="time">22</span>
-                <span>Hours</span>
-            </div>
-            <div class="time-box">
-                <span class="time">33</span>
-                <span>Minutes</span>
-            </div>
-            <div class="time-box">
-                <span class="time">33</span>
-                <span>Seconds</span>
-            </div>
+        <h2>GARANTA JÁ O SEU! A BATALHA COMEÇA EM BREVE</h2>
+        <div id="timer">
+            <div><span id="days">00</span> Dias</div>
+            <div><span id="hours">00</span> Horas</div>
+            <div><span id="minutes">00</span> Minutos</div>
+            <div><span id="seconds">00</span> Segundos</div>
         </div>
-        <button class="btn-primary">Buy Tickets</button>
     </section>
 
-    <section class="our-tours">
-        <h2>OUR TOURS</h2>
-        <p>Explore the most iconic music festivals and events happening around the world.</p>
-        <div class="timeline">
-            <div class="event">
-                <div class="year">2018</div>
-                <div class="details">
-                    <h3>Coachella Music Festival</h3>
-                    <p>April 13-15 & April 20-22, 2018</p>
-                </div>
+    <!-- LISTA DE TOURS -->
+    <section class="tours">
+        <h2>Nossos eventos</h2>
+        <div class="tour-list">
+            <div id="pizza" class="tour-item">
+                <a class="" href="../src/loja.html" target="_blank">
+                    <span>DO INICIO AO FIM</span>
+                    <h3>Pizzaria Soberba</h3>
+                    <p>EM TODOS OS EVENTOS</p>
+                </a>
             </div>
-            <div class="event">
-                <div class="year">2018</div>
-                <div class="details">
-                    <h3>Voodoo Music + Arts Festival</h3>
-                    <p>October 26-28, 2018</p>
-                </div>
+            <div class="tour-item">
+                <a class="" href="" target="_blank">
+                    <span>23/03/2024</span>
+                    <h3>Amazonia Vibes Festival</h3>
+                    <p>Manaus, Amazonas</p>
+                </a>
             </div>
-            <div class="event">
-                <div class="year">2018</div>
-                <div class="details">
-                    <h3>Rock in Rio Music Festival</h3>
-                    <p>September 27 & 28, 2018</p>
-                </div>
+            <div class="tour-item">
+                <a class="" href="" target="_blank">
+                    <span>10/07 2024</span>
+                    <h3>Bahia Groove Experience</h3>
+                    <p>Salvador, Bahia</p>
+                </a>
             </div>
-            <div class="event">
-                <div class="year">2018</div>
-                <div class="details">
-                    <h3>Life is Beautiful Festival</h3>
-                    <p>September 21-23, 2018</p>
-                </div>
+            <div class="tour-item">
+                <a class="" href="" target="_blank">
+                    <span>05/10/2024</span>
+                    <h3>Serra Rock Festival</h3>
+                    <p>São Paulo, BR</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 World Music Challenge. All rights reserved.</p>
+    <!-- GALERIA DE IMAGENS -->
+    <section class="gallery">
+        <h2>Nossa galeria</h2>
+        <div class="images">
+            <img src="../image/Gallery/foto4.webp" alt="Banda se apresentando no Coachella Music Festival"
+                loading="lazy">
+            <img src="../image/Gallery/foto1.webp" alt="Público animado no Rock in Rio" loading="lazy">
+            <img src="../image/Gallery/foto3.webp" alt="Show de luzes no Voodoo Music & Arts Festival" loading="lazy">
+            <img src="../image/Gallery/foto2.webp" alt="Artista principal no Life is Beautiful Festival" loading="lazy">
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section class="about" id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma equipe apaixonada por música e eventos. Com anos de experiência, nosso objetivo é levar você aos
+            melhores shows e festivais do planeta.</p>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials" id="testemunhos">
+        <h2>Depoimentos</h2>
+        <div class="testimonial-item">
+            <p>"Foi uma experiência única! Os shows foram incríveis e a organização impecável."</p>
+            <span>- Maria Souza</span>
+        </div>
+        <div class="testimonial-item">
+            <p>"Os melhores festivais da minha vida! Mal posso esperar pelo próximo."</p>
+            <span>- João Pereira</span>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3>Quais festivais estão inclusos?</h3>
+            <p>Incluímos festivais como Coachella, Rock in Rio, Voodoo Music Festival e muitos outros.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como posso comprar ingressos?</h3>
+            <p>Os ingressos podem ser adquiridos através do nosso site na seção de eventos.</p>
+        </div>
+    </section>
+
+    <!-- SUBSCRIBE SECTION -->
+    <section class="subscribe">
+        <h2>Inscreva-se para Novidades</h2>
+        <form method="post" target="_blank" novalidate>
+            <input type="email" name="EMAIL" placeholder="Digite seu e-mail" required>
+            <button type="submit">Inscrever</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Contato:</h2>
+            <ul>
+                <li>Email: <a
+                        href="https://mail.google.com/mail/?view=cm&to=artur.duarte@estudante.ifgoiano.edu.br&su=Mais%20informações&body=Olá,%20gostaria%20de%20informações%20sobre%20seus%20eventos."
+                        target="_blank">artur.duarte@estudante.ifgoiano.edu.br</a>
+                </li>
+                <li>Telefone: <a
+                        href="https://wa.me//64992869883?text=Olá, gostaria de pedir mais informaçoes sobre o evento musical."
+                        target="_blank">(64) 99286-9883</a></li>
+                <li>Instagram: <a href=" https://www.instagram.com/arturduartemonteiro/"
+                        target="_blank">@arturduartemonteiro</a>
+                </li>
+                <li>Página do Autor: <a href="../index.html">Página pessoal</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Song Wave. Todos os direitos reservados.</p>
+        </div>
     </footer>
+    <script>
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item h3');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Contagem regressiva
+        const timer = () => {
+            const eventDate = new Date('2024-12-31T23:59:59').getTime();
+            const now = new Date().getTime();
+            const gap = eventDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            document.getElementById('days').innerText = Math.floor(gap / day);
+            document.getElementById('hours').innerText = Math.floor((gap % day) / hour);
+            document.getElementById('minutes').innerText = Math.floor((gap % hour) / minute);
+            document.getElementById('seconds').innerText = Math.floor((gap % minute) / second);
+        };
+
+        setInterval(timer, 1000);
+    </script>
 </body>
 
 </html>
