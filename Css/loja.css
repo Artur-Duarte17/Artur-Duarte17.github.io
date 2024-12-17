@@ -2,13 +2,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    margin-top: 40px;
-    background-color: #FFA07A;
+    color: #fff;
+    /* Cor padrão do texto */
     line-height: 1.6;
+    margin-top: 40px;
     /* Espaço superior para compensar o nav fixo */
 }
 
@@ -99,117 +101,11 @@ nav {
     /* Garante que fique acima do menu */
 }
 
-.section-1,
-.section-2 {
-    margin: 30px auto;
-    /* Centraliza horizontalmente */
-    width: 90%;
-    /* Garante que as seções ocupem até 90% da largura */
-    max-width: 1200px;
-    /* Define um máximo para telas grandes */
-    text-align: center;
-    /* Centraliza o conteúdo interno */
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: red;
-}
-
-/* ========== SECTION-1 ========== */
-
-
-
-.h2-section1 {
-    font-family: arial;
-    font-size: 25px;
-    padding-top: 27px;
-}
-
-.p1 {
-    padding-top: 13px;
-    font-family: arial;
-    font-size: 22px;
-}
-
-/* ========== SECTION-2 ========== */
-#section-grid {
-    padding: 30px;
-}
-
-.grid {
-    background-color: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-column-gap: 10px;
-    gap: 20px;
-    max-width: 90vw;
-    margin: 0 auto;
-    padding: 5px;
-}
-
-
-.sub-grid {
-    margin: 0 auto;
-    padding: 15px;
-    background-color: #fff;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.h2-cardapio {
-    color: #ddd;
-    padding-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-}
-
-/* IMAGENS */
-.img-pizza {
-    display: block;
-    height: 55%;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-}
-
-.h2-sub-grid {
-    font-size: 20px;
-    padding-bottom: 5px;
-
-}
-
-.p-preços {
-    font-size: 15px;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.btn-buy {
-    width: 70%;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 15px;
-    margin: 10px;
-    display: inline-block;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-buy:hover {
-    background-color: #ece80a;
-    transform: scale(1.05);
-    color: red;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-
-
-
-
 @media (max-width: 768px) {
+
+    body {
+        margin-top: 0px;
+    }
 
     /* Mostra o botão hamburguer */
     .button-toggle {
@@ -247,15 +143,4 @@ nav {
         max-width: 90%;
         text-align: center;
     }
-}
-
-@media only screen and (max-width: 480px) {
-    .section-2 {
-        width: 95vw;
-    }
-
-    .grid {
-        width: 95vw;
-    }
-
 }
