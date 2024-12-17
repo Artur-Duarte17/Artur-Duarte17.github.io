@@ -26,11 +26,11 @@
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-        </nav>
-        <div class="banner">
-            <h1>WORLD MUSIC CHALLENGE</h1>
-            <p>Explore a magia dos maiores festivais do mundo</p>
-        </div>
+            </nav>
+            <div class="banner">
+                <h1>WORLD MUSIC CHALLENGE</h1>
+                <p>Explore a magia dos maiores festivais do mundo</p>
+            </div>
     </header>
 
     <!-- CONTAGEM REGRESSIVA -->
@@ -156,6 +156,13 @@
         </div>
     </footer>
     <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
         // FAQ Toggle
         const faqItems = document.querySelectorAll('.faq-item h3');
         faqItems.forEach(item => {

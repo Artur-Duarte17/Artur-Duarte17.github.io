@@ -38,6 +38,8 @@ html {
     width: 100%;
     position: absolute;
     top: 0;
+    background-color: #111; /* Fica visível no mobile */
+    z-index: 10;
 }
 
 .logo {
@@ -62,6 +64,14 @@ html {
 
 .nav-links a:hover {
     color: #ff007f;
+}
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #ff007f;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .banner h1 {
@@ -357,9 +367,24 @@ input:focus {
 
 
 @media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Mostra o botão no mobile */
+    }
+
     .nav-links {
+        display: none; /* Esconde o menu por padrão */
         flex-direction: column;
-        gap: 15px;
+        position: absolute;
+        top: 100%; /* Abaixo do navbar */
+        left: 0;
+        width: 100%;
+        background-color: #111;
+        gap: 10px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostra o menu quando ativo */
     }
 
     .tour-list {
