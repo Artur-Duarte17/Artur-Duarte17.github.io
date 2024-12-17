@@ -1,3 +1,20 @@
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// FAQ Toggle
+const faqItems = document.querySelectorAll('.faq-item h3');
+faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+    });
+});
+
+// Contagem regressiva
 const timer = () => {
     const eventDate = new Date('2024-12-31T23:59:59').getTime();
     const now = new Date().getTime();

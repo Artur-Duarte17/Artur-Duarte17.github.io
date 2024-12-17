@@ -8,274 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lora:wght@400;700&display=swap"
         rel="stylesheet">
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Lora', serif;
-            background-color: #121212;
-            color: #fff;
-            scroll-behavior: smooth;
-            line-height: 1.6;
-        }
-
-        /* Header Styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 5%;
-            background-color: #000;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
-
-        header h1 {
-            font-family: 'Cinzel Decorative', serif;
-            color: #D4AF37;
-            font-size: 1.5rem;
-        }
-
-        /* Navigation Styles */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .menu-toggle span {
-            height: 3px;
-            width: 25px;
-            background-color: #fff;
-            margin: 4px 0;
-            transition: 0.4s;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1rem;
-            transition: color 0.3s, transform 0.2s;
-        }
-
-        nav a:hover {
-            color: #D4AF37;
-            transform: scale(1.1);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            position: relative;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            font-family: 'Cinzel Decorative', serif;
-            color: #fff;
-            margin-bottom: 20px;
-            animation: slideIn 2s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .hero button {
-            background-color: transparent;
-            border: 2px solid #D4AF37;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: #D4AF37;
-            transition: 0.5s;
-            z-index: -1;
-        }
-
-        .hero button:hover::before {
-            left: 0;
-        }
-
-        .hero button:hover {
-            color: #000;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 50px 5%;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s ease-out;
-        }
-
-        .about,
-        .menu,
-        .testimonials,
-        .contact {
-            background-color: #1F1F1F;
-            margin: 20px 0;
-        }
-
-        /* Menu Items */
-        .menu-items {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .menu-item {
-            width: 300px;
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #D4AF37;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .menu-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-        }
-
-        .menu-item h3 {
-            font-family: 'Cinzel Decorative', serif;
-            color: #D4AF37;
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #D4AF37;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 10px;
-            }
-
-            .menu-toggle {
-                display: flex;
-                position: absolute;
-                right: 20px;
-                top: 15px;
-            }
-
-            nav {
-                display: none;
-                width: 100%;
-            }
-
-            nav.active {
-                display: block;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background-color: #000;
-                width: 100%;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .menu-items {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .menu-item {
-                width: 90%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../Css/loja.css">
 </head>
 
 <body>
@@ -290,9 +23,12 @@
         <nav>
             <ul>
                 <li><a href="#about">Sobre</a></li>
+                <li><a href="#products"> Reservas</a></li>
                 <li><a href="#menu">Cardápio</a></li>
                 <li><a href="#testimonials">Depoimentos</a></li>
                 <li><a href="#contact">Contato</a></li>
+                <li><a href="#"> Perfil</a></li>
+                <li><a id="cart-nav" onclick="toggleCart()"> Carrinho</a></li>
             </ul>
         </nav>
     </header>
@@ -301,15 +37,60 @@
     <div class="hero">
         <div class="hero-content">
             <h2>Onde a tradição encontra o extraordinário</h2>
-            <button>Reserve sua Mesa</button>
+            <a href="#products"><button>Reserve sua Mesa</button></a>
         </div>
     </div>
 
     <!-- Seção Sobre -->
     <section id="about" class="about">
         <h2>Nossa Essência</h2>
-        <p>A Pizzaria Soberba oferece a verdadeira experiência italiana com pizzas gourmet feitas em forno a lenha, usando apenas ingredientes importados e preparados por chefs premiados.</p>
+        <p>A Pizzaria Soberba oferece a verdadeira experiência italiana com pizzas gourmet feitas em forno a lenha,
+            usando apenas ingredientes importados e preparados por chefs premiados.</p>
     </section>
+
+    <!-- Seção de Produtos -->
+    <section id="products" class="products">
+        <h2>Reservas de Mesas</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="../image/pizzaria/vip.webp" alt="Mesa VIP">
+                <h3>Mesa VIP</h3>
+                <p>Exclusividade e privacidade com serviço premium.</p>
+                <p>R$ 499,90</p>
+                <button onclick="addToCart('Mesa VIP', 499.9)">Reservar</button>
+            </div>
+            <div class="product-item">
+                <img src="../image/pizzaria/panoramica.webp" alt="Mesa Panorâmica">
+                <h3>Mesa Panorâmica</h3>
+                <p>Vista privilegiada e ambiente luxuoso.</p>
+                <p>R$ 399,90</p>
+                <button onclick="addToCart('Mesa Panorâmica', 399.9)">Reservar</button>
+            </div>
+            <div class="product-item">
+                <img src="../image/pizzaria/chefe.webp" alt="Mesa Chef’s Choice">
+                <h3>Mesa Chef’s Choice</h3>
+                <p>Experiência gastronômica com menu exclusivo.</p>
+                <p>R$ 599,90</p>
+                <button onclick="addToCart('Mesa Chef’s Choice', 599.9)">Reservar</button>
+            </div>
+            <div class="product-item">
+                <img src="../image/pizzaria/family.webp" alt="Mesa La Familia">
+                <h3>Mesa La Familia</h3>
+                <p>Ideal para grupos e celebrações.</p>
+                <p>R$ 299,90</p>
+                <button onclick="addToCart('Mesa La Familia', 299.9)">Reservar</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Cart Section -->
+    <div id="cart">
+        <h3>Seu Carrinho</h3>
+        <ul id="cart-items"></ul>
+        <button onclick="clearCart()">Limpar Carrinho</button>
+    </div>
+
 
     <!-- Cardápio -->
     <section id="menu" class="menu">
@@ -349,82 +130,7 @@
         <p>&copy; 2024 Pizzaria Soberba | <a href="#">Siga-nos no Instagram</a></p>
     </footer>
 
-    <script>
-        // Intersection Observer for Sections
-        const sections = document.querySelectorAll('section');
-        const options = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('nav');
-        const header = document.querySelector('header');
-
-        menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            
-            // Toggle menu icon animation
-            menuToggle.classList.toggle('active');
-            
-            if (menuToggle.classList.contains('active')) {
-                menuToggle.innerHTML = `
-                    <span style="transform: rotate(45deg) translate(5px, 5px);"></span>
-                    <span style="opacity: 0;"></span>
-                    <span style="transform: rotate(-45deg) translate(5px, -5px);"></span>
-                `;
-            } else {
-                menuToggle.innerHTML = `
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                `;
-            }
-        });
-
-        // Close mobile menu when a nav link is clicked
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                menuToggle.classList.remove('active');
-                menuToggle.innerHTML = `
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                `;
-            });
-        });
-
-        // Scroll Header Effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = 'rgba(0,0,0,0.9)';
-            } else {
-                header.style.backgroundColor = '#000';
-            }
-        });
-
-        // Reservation Button Interaction
-        const reserveButton = document.querySelector('.hero button');
-        reserveButton.addEventListener('click', () => {
-            alert('Reserva indisponível no momento. Por favor, entre em contato pelo telefone (11) 98765-4321.');
-        });
-    </script>
+    <script src="../JavaScript/loja.js"></script>
 </body>
 
 </html>
