@@ -4,272 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria Soberba - Loja Gourmet</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lora:wght@400;700&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Portfólio de Projetos</title>
+    <link rel="stylesheet" href="../Css/portifolio.css">
 
-        body {
-            font-family: 'Lora', serif;
-            background-color: #121212;
-            color: #fff;
-            scroll-behavior: smooth;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 5%;
-            background-color: #000;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        header h1 {
-            font-family: 'Cinzel Decorative', serif;
-            color: #D4AF37;
-            font-size: 1.5rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #D4AF37;
-        }
-
-        nav i {
-            margin-right: 5px;
-        }
-
-        /* Products Section */
-        .products {
-            padding: 80px 5%;
-            text-align: center;
-            background-color: #1F1F1F;
-        }
-
-        .products h2 {
-            font-family: 'Cinzel Decorative', serif;
-            margin-bottom: 30px;
-            color: #D4AF37;
-        }
-
-        .product-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .product-item {
-            background: #121212;
-            border: 1px solid #D4AF37;
-            border-radius: 8px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .product-item img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .product-item h3 {
-            font-family: 'Cinzel Decorative', serif;
-            color: #D4AF37;
-            margin: 15px 0;
-        }
-
-        .product-item p {
-            margin: 10px 0;
-        }
-
-        .product-item button {
-            background: #D4AF37;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            color: #000;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .product-item button:hover {
-            background: #b8952c;
-        }
-
-        .product-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-        }
-
-        /* Cart Section */
-        #cart {
-            background: #000;
-            color: #fff;
-            padding: 20px;
-            position: fixed;
-            right: 20px;
-            top: 100px;
-            width: 250px;
-            border: 1px solid #D4AF37;
-            border-radius: 8px;
-            display: none;
-        }
-
-        #cart h3 {
-            margin-bottom: 15px;
-            font-family: 'Cinzel Decorative', serif;
-            color: #D4AF37;
-        }
-
-        #cart ul {
-            list-style: none;
-        }
-
-        #cart ul li {
-            margin: 10px 0;
-        }
-
-        #cart button {
-            background: #D4AF37;
-            border: none;
-            padding: 5px 10px;
-            color: #000;
-            cursor: pointer;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #D4AF37;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Cabeçalho -->
+    <!-- Header -->
     <header>
-        <h1>Pizzaria Soberba</h1>
         <nav>
+            <h1>Meu Portfólio</h1>
             <ul>
-                <li><a href="#products"><i class="fas fa-pizza-slice"></i> Reservas</a></li>
-                <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
-                <li><a href="#" onclick="toggleCart()"><i class="fas fa-shopping-cart"></i> Carrinho</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Seção de Produtos -->
-    <section id="products" class="products">
-        <h2>Reservas de Mesas</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://via.placeholder.com/300" alt="Mesa VIP">
-                <h3>Mesa VIP</h3>
-                <p>Exclusividade e privacidade com serviço premium.</p>
-                <p>R$ 499,90</p>
-                <button onclick="addToCart('Mesa VIP', 499.9)">Reservar</button>
+    <!-- Seção de Projetos -->
+    <section id="projects">
+        <h2>Meus Projetos</h2>
+
+        <div class="project">
+            <img src="../image/projetos/Personal.png" alt="Projeto 1">
+            <div class="project-details">
+                <h3>Landing Page Loja</h3>
+                <p>Landing Page responsiva para loja virtual, criada com HTML, CSS e JS.</p>
+                <div class="buttons">
+                    <a href="../index.html" target="_blank">Ver Projeto</a>
+                    <a href="https://github.com/Artur-Duarte17/Artur-Duarte17.github.io/blob/main/index.html"
+                        target="_blank">Ver Código</a>
+                </div>
             </div>
-            <div class="product-item">
-                <img src="https://via.placeholder.com/300" alt="Mesa Panorâmica">
-                <h3>Mesa Panorâmica</h3>
-                <p>Vista privilegiada e ambiente luxuoso.</p>
-                <p>R$ 399,90</p>
-                <button onclick="addToCart('Mesa Panorâmica', 399.9)">Reservar</button>
+        </div>
+
+        <div class="project">
+            <img src="../image/projetos/event.png" alt="Projeto 2">
+            <div class="project-details">
+                <h3>Sistema de Tarefas</h3>
+                <p>Aplicativo web para gerenciamento de tarefas, utilizando JavaScript e localStorage.</p>
+                <div class="buttons">
+                    <a href="../src/evento.html" target="_blank">Ver Projeto</a>
+                    <a href="https://github.com/Artur-Duarte17/Artur-Duarte17.github.io/blob/main/src/evento.html"
+                        target="_blank">Ver Código</a>
+                </div>
             </div>
-            <div class="product-item">
-                <img src="https://via.placeholder.com/300" alt="Mesa Chef’s Choice">
-                <h3>Mesa Chef’s Choice</h3>
-                <p>Experiência gastronômica com menu exclusivo.</p>
-                <p>R$ 599,90</p>
-                <button onclick="addToCart('Mesa Chef’s Choice', 599.9)">Reservar</button>
+        </div>
+
+        <div class="project">
+            <img src="../image/projetos/story.png" alt="Projeto 3">
+            <div class="project-details">
+                <h3>Sistema de Tarefas</h3>
+                <p>Aplicativo web para gerenciamento de tarefas, utilizando JavaScript e localStorage.</p>
+                <div class="buttons">
+                    <a href="../src/loja.html" target="_blank">Ver Projeto</a>
+                    <a href="https://github.com/Artur-Duarte17/Artur-Duarte17.github.io/blob/main/src/loja.html"
+                        target="_blank">Ver Código</a>
+                </div>
             </div>
-            <div class="product-item">
-                <img src="https://via.placeholder.com/300" alt="Mesa La Familia">
-                <h3>Mesa La Familia</h3>
-                <p>Ideal para grupos e celebrações.</p>
-                <p>R$ 299,90</p>
-                <button onclick="addToCart('Mesa La Familia', 299.9)">Reservar</button>
+        </div>
+
+        <div class="project">
+            <img src="img/projeto2.jpg" alt="Projeto 2">
+            <div class="project-details">
+                <h3>Sistema de Tarefas</h3>
+                <p>Aplicativo web para gerenciamento de tarefas, utilizando JavaScript e localStorage.</p>
+                <div class="buttons">
+                    <a href="#" target="_blank">Ver Projeto</a>
+                    <a href="#" target="_blank">Ver Código</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Cart Section -->
-    <div id="cart">
-        <h3>Seu Carrinho</h3>
-        <ul id="cart-items"></ul>
-        <button onclick="clearCart()">Limpar Carrinho</button>
-    </div>
+    <!-- Sobre Mim -->
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <p>Sou um desenvolvedor focado em criar aplicações funcionais e responsivas, utilizando tecnologias modernas
+            como HTML, CSS e JavaScript.</p>
+    </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Pizzaria Soberba | <a href="#">Siga-nos no Instagram</a></p>
-    </footer>
+    <!-- Contato -->
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Entre em contato comigo através das redes sociais:</p>
+        <ul>
+            <li><a href="https://github.com/Artur-Duarte17" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/artur-duarte-monteiro-7a69922b2/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&to=artur.duarte@estudante.ifgoiano.edu.br"
+                    target="_blank">Email: artur.duarte@estudante.ifgoiano.edu.br</a></li>
+        </ul>
+    </section>
 
-    <script>
-        let cart = [];
-
-        function addToCart(product, price) {
-            cart.push({ product, price });
-            updateCart();
-            alert(`${product} adicionado ao carrinho por R$ ${price.toFixed(2)}!`);
-        }
-
-        function updateCart() {
-            const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = '';
-            cart.forEach((item, index) => {
-                cartItems.innerHTML += `<li>${item.product} - R$ ${item.price.toFixed(2)}</li>`;
-            });
-        }
-
-        function toggleCart() {
-            const cartSection = document.getElementById('cart');
-            cartSection.style.display = cartSection.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function clearCart() {
-            cart = [];
-            updateCart();
-        }
-    </script>
+    <!-- JavaScript -->
+    <script src="../JavaScript/portifolio.js"></script>
 </body>
 
 </html>
