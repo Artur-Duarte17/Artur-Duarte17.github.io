@@ -115,11 +115,36 @@
 
         .hero {
             margin: auto;
+            margin-left: 7vw;
             max-width: 80vw;
+            text-align: center;
+            /* Centraliza o texto */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Centraliza verticalmente */
+            align-items: center;
+            /* Centraliza horizontalmente */
+            min-height: 80vh;
+            /* Garante que ocupe a altura total da viewport */
+            padding: 20px;
+            /* Adiciona espaço interno */
         }
 
         .hero h1 {
             font-size: 2.5rem;
+            text-align: center;
+            /* Garante centralização do texto */
+            margin-bottom: 10px;
+            /* Adiciona espaço inferior */
+        }
+
+        .hero p {
+            font-size: 1rem;
+            text-align: center;
+            /* Garante centralização do texto */
+            margin-bottom: 20px;
+            /* Adiciona espaço inferior */
         }
 
         .highlight {
@@ -367,6 +392,27 @@
             .about-text {
                 max-width: 90%;
                 text-align: center;
+            }
+
+
+            .hero {
+                max-width: 100%;
+                /* Garante que o Hero use toda a largura da tela */
+                padding: 10px;
+                /* Reduz o espaçamento interno */
+                text-align: center;
+                /* Centraliza o texto */
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                /* Ajusta o tamanho do título para telas menores */
+            }
+
+            .btn-learn-more,
+            .btn-play-video {
+                width: auto;
+                /* Permite que os botões se ajustem automaticamente */
             }
         }
     </style>
