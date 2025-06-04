@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #121212;
+    color: #fff;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #D4AF37;
+    font-size: 1.5rem;
+}
+
+/* Navigation Styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+#cart-nav {
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #D4AF37;
+    transform: scale(1.1);
+}
+
+/* Products Section */
+.products {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #1F1F1F;
+}
+
+.products h2 {
+    font-family: 'Cinzel Decorative', serif;
+    margin-bottom: 30px;
+    color: #D4AF37;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background: #121212;
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-item h3 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #D4AF37;
+    margin: 15px 0;
+}
+
+.product-item p {
+    margin: 10px 0;
+}
+
+.product-item button {
+    background: #D4AF37;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}
+
+.product-item button:hover {
+    background: #b8952c;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+/* Cart Section */
+#cart {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 250px;
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    display: none;
+}
+
+#cart h3 {
+    margin-bottom: 15px;
+    font-family: 'Cinzel Decorative', serif;
+    color: #D4AF37;
+}
+
+#cart ul {
+    list-style: none;
+}
+
+#cart ul li {
+    margin: 10px 0;
+}
+
+#cart button {
+    background: #D4AF37;
+    border: none;
+    padding: 5px 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('../image//pizzaria/background-pizza.webp') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-family: 'Cinzel Decorative', serif;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: slideIn 2s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero button {
+    background-color: transparent;
+    border: 2px solid #D4AF37;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #D4AF37;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.hero button:hover::before {
+    left: 0;
+}
+
+.hero button:hover {
+    color: #000;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 5%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+.about,
+.menu,
+.testimonials,
+.contact {
+    background-color: #1F1F1F;
+    margin: 20px 0;
+}
+
+/* Menu Items */
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.menu-item h3 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #D4AF37;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #000;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 90%;
+    }
+}

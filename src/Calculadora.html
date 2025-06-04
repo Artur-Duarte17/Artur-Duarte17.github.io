@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        /* Estilo Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        .calculator {
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .calculator-screen {
+            width: 100%;
+            height: 50px;
+            background-color: #222;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1.5rem;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .btn {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #777;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            background-color: #999;
+        }
+
+        .btn.operator {
+            background-color: #1e90ff;
+        }
+
+        .btn.operator:hover {
+            background-color: #0073e6;
+        }
+
+        .btn.clear {
+            background-color: #ff6347;
+        }
+
+        .btn.clear:hover {
+            background-color: #e53e3e;
+        }
+
+        .btn.equal {
+            background-color: #28a745;
+            grid-column: span 2;
+        }
+
+        .btn.equal:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="screen" class="calculator-screen" disabled>
+        <div class="buttons">
+            <button class="btn clear" id="clear">C</button>
+            <button class="btn operator" data-value="(">(</button>
+            <button class="btn operator" data-value=")">)</button>
+            <button class="btn operator" data-value="/">/</button>
+
+            <button class="btn" data-value="7">7</button>
+            <button class="btn" data-value="8">8</button>
+            <button class="btn" data-value="9">9</button>
+            <button class="btn operator" data-value="*">*</button>
+
+            <button class="btn" data-value="4">4</button>
+            <button class="btn" data-value="5">5</button>
+            <button class="btn" data-value="6">6</button>
+            <button class="btn operator" data-value="-">-</button>
+
+            <button class="btn" data-value="1">1</button>
+            <button class="btn" data-value="2">2</button>
+            <button class="btn" data-value="3">3</button>
+            <button class="btn operator" data-value="+">+</button>
+
+            <button class="btn" data-value="0">0</button>
+            <button class="btn" data-value=".">.</button>
+            <button class="btn equal" id="equal">=</button>
+        </div>
+    </div>
+
+    <script>
+        const screen = document.getElementById('screen');
+        const buttons = document.querySelectorAll('.btn');
+        let input = '';
+
+        // Função segura para avaliar expressões matemáticas
+        function safeEval(expression) {
+            try {
+                return Function(`'use strict'; return (${expression})`)();
+            } catch {
+                return 'Erro';
+            }
+        }
+
+        // Função para atualizar o display
+        function updateScreen() {
+            screen.value = input;
+        }
+
+        // Manipulação dos botões
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.dataset.value;
+
+                if (button.id === 'clear') {
+                    input = '';
+                } else if (button.id === 'equal') {
+                    input = safeEval(input);
+                } else {
+                    input += value;
+                }
+
+                updateScreen();
+            });
+        });
+
+        // Adiciona suporte para teclado
+        document.addEventListener('keydown', (e) => {
+            const validKeys = /[0-9\+\-\*/\.\(\)]/;
+            if (validKeys.test(e.key)) {
+                input += e.key;
+            } else if (e.key === 'Enter') {
+                input = safeEval(input);
+            } else if (e.key === 'Backspace') {
+                input = input.slice(0, -1);
+            } else if (e.key === 'Escape') {
+                input = '';
+            }
+
+            updateScreen();
+        });
+    </script>
+</body>
+</html>
