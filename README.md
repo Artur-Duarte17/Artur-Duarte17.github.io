@@ -130,3 +130,4 @@ Abra o terminal e execute:
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
+```
