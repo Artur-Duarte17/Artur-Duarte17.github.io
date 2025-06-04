@@ -123,10 +123,21 @@ Desenvolver um conjunto de páginas funcionais e interativas, explorando os conc
 
 ---
 
-## 🛠️ **Como Executar o Projeto**  
+## 🛠️ **Como Executar o Projeto**
 
-### Passo 1: Clone o Repositório  
-Abra o terminal e execute:  
+### Passo 1: Clone o Repositório
+Abra o terminal e execute:
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
+```
+
+### Passo 2: Instale as Dependências
+```bash
+npm install
+```
+
+### Passo 3: Execute os Testes
+```bash
+npm test
+```

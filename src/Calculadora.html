@@ -124,19 +124,11 @@
         </div>
     </div>
 
+    <script src="../JavaScript/safeEval.js"></script>
     <script>
         const screen = document.getElementById('screen');
         const buttons = document.querySelectorAll('.btn');
         let input = '';
-
-        // Função segura para avaliar expressões matemáticas
-        function safeEval(expression) {
-            try {
-                return Function(`'use strict'; return (${expression})`)();
-            } catch {
-                return 'Erro';
-            }
-        }
 
         // Função para atualizar o display
         function updateScreen() {

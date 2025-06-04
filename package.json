@@ -1,0 +1,16 @@
+{
+  "name": "artur-duarte17.github.io",
+  "version": "1.0.0",
+  "description": "Este repositório contém os arquivos do projeto final da **primeira parte da disciplina de Desenvolvimento Web I**, do IF Goiano. O projeto inclui seis páginas web, desenvolvidas com **HTML**, **CSS** e **JavaScript**, demonstrando habilidades em design, interatividade e programação.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
