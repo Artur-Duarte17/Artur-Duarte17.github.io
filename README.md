@@ -44,10 +44,9 @@ Desenvolver um conjunto de páginas funcionais e interativas, explorando os conc
    - **Animação Hover**: Destaque visual ao passar o mouse nos projetos.  
    - **Scroll Suave** para navegação entre seções.  
 - **Projetos Listados**:  
-   1. **Landing Page Loja**  
-   2. **Sistema de Tarefas**  
-   3. **Jogo da Memória**  
-   4. **Calculadora**  
+   1. **Landing Page Loja**
+   2. **Jogo da Memória**
+   3. **Calculadora**
 - **Recursos Utilizados**:  
    - HTML5 e CSS3 para estruturação e design.  
    - JavaScript para efeitos interativos (hover e scroll).  
