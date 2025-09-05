@@ -130,3 +130,13 @@ Abra o terminal e execute:
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
+```
+
+### Passo 2: Abra no Navegador
+Abra o arquivo `index.html` diretamente ou utilize um servidor local:
+```bash
+python3 -m http.server
+```
+
+### Uso
+Acesse `http://localhost:8000` (ou apenas abra `index.html`) para explorar o site.
