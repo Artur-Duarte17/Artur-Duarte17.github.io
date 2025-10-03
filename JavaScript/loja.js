@@ -1,98 +1,159 @@
- // Intersection Observer for Sections
- const sections = document.querySelectorAll('section');
- const options = {
-     threshold: 0.1
- };
+class LojaApp {
+    constructor() {
+        this.cart = [];
+        this.init();
+    }
 
- const observer = new IntersectionObserver((entries) => {
-     entries.forEach(entry => {
-         if (entry.isIntersecting) {
-             entry.target.style.opacity = 1;
-             entry.target.style.transform = 'translateY(0)';
-         }
-     });
- }, options);
+    init() {
+        try {
+            this.setupSectionAnimations();
+            this.setupMobileMenu();
+            this.setupScrollEffects();
+            this.setupCart();
+        } catch (error) {
+            console.error('Erro ao inicializar loja:', error);
+        }
+    }
 
- sections.forEach(section => {
-     observer.observe(section);
- });
+    setupSectionAnimations() {
+        const sections = document.querySelectorAll('section');
+        if (!sections.length) return;
 
- // Mobile Menu Toggle
- const menuToggle = document.querySelector('.menu-toggle');
- const nav = document.querySelector('nav');
- const header = document.querySelector('header');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
- menuToggle.addEventListener('click', () => {
-     nav.classList.toggle('active');
+        sections.forEach(section => observer.observe(section));
+    }
 
-     // Toggle menu icon animation
-     menuToggle.classList.toggle('active');
+    setupMobileMenu() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        if (!menuToggle || !nav) return;
 
-     if (menuToggle.classList.contains('active')) {
-         menuToggle.innerHTML = `
-             <span style="transform: rotate(45deg) translate(5px, 5px);"></span>
-             <span style="opacity: 0;"></span>
-             <span style="transform: rotate(-45deg) translate(5px, -5px);"></span>
-         `;
-     } else {
-         menuToggle.innerHTML = `
-             <span></span>
-             <span></span>
-             <span></span>
-         `;
-     }
- });
+        const menuHTML = {
+            active: '<span class="line active-1"></span><span class="line active-2"></span><span class="line active-3"></span>',
+            inactive: '<span class="line"></span><span class="line"></span><span class="line"></span>'
+        };
 
- // Close mobile menu when a nav link is clicked
- const navLinks = document.querySelectorAll('nav a');
- navLinks.forEach(link => {
-     link.addEventListener('click', () => {
-         nav.classList.remove('active');
-         menuToggle.classList.remove('active');
-         menuToggle.innerHTML = `
-             <span></span>
-             <span></span>
-             <span></span>
-         `;
-     });
- });
+        menuToggle.addEventListener('click', () => {
+            try {
+                const isActive = nav.classList.toggle('active');
+                menuToggle.classList.toggle('active', isActive);
+                menuToggle.innerHTML = isActive ? menuHTML.active : menuHTML.inactive;
+            } catch (error) {
+                console.error('Erro no menu mobile:', error);
+            }
+        });
 
- // Scroll Header Effect
- window.addEventListener('scroll', () => {
-     const header = document.querySelector('header');
-     if (window.scrollY > 50) {
-         header.style.backgroundColor = 'rgba(0,0,0,0.9)';
-     } else {
-         header.style.backgroundColor = '#000';
-     }
- });
+        // Fechar menu ao clicar em links
+        nav.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.innerHTML = menuHTML.inactive;
+            }
+        });
+    }
 
+    setupScrollEffects() {
+        const header = document.querySelector('header');
+        if (!header) return;
 
+        let ticking = false;
+        const handleScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    header.style.backgroundColor = window.scrollY > 50 ? 'rgba(0,0,0,0.9)' : '#000';
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
 
- /*________________________________________________*/
+        window.addEventListener('scroll', handleScroll, { passive: true });
+    }
 
- let cart = [];
+    setupCart() {
+        window.addToCart = (product, price) => this.addToCart(product, price);
+        window.toggleCart = () => this.toggleCart();
+        window.clearCart = () => this.clearCart();
+    }
 
- function addToCart(product, price) {
-     cart.push({ product, price });
-     updateCart();
-     alert(`${product} adicionado ao carrinho por R$ ${price.toFixed(2)}!`);
- }
+    addToCart(product, price) {
+        try {
+            if (!product || typeof price !== 'number') {
+                throw new Error('Produto ou preço inválido');
+            }
+            
+            this.cart.push({ product, price });
+            this.updateCart();
+            this.showNotification(`${product} adicionado ao carrinho por R$ ${price.toFixed(2)}!`);
+        } catch (error) {
+            console.error('Erro ao adicionar ao carrinho:', error);
+            this.showNotification('Erro ao adicionar produto ao carrinho', 'error');
+        }
+    }
 
- function updateCart() {
-     const cartItems = document.getElementById('cart-items');
-     cartItems.innerHTML = '';
-     cart.forEach((item, index) => {
-         cartItems.innerHTML += `<li>${item.product} - R$ ${item.price.toFixed(2)}</li>`;
-     });
- }
+    updateCart() {
+        try {
+            const cartItems = document.getElementById('cart-items');
+            if (!cartItems) return;
 
- function toggleCart() {
-     const cartSection = document.getElementById('cart');
-     cartSection.style.display = cartSection.style.display === 'block' ? 'none' : 'block';
- }
+            const fragment = document.createDocumentFragment();
+            this.cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.product} - R$ ${item.price.toFixed(2)}`;
+                fragment.appendChild(li);
+            });
+            
+            cartItems.innerHTML = '';
+            cartItems.appendChild(fragment);
+        } catch (error) {
+            console.error('Erro ao atualizar carrinho:', error);
+        }
+    }
 
- function clearCart() {
-     cart = [];
-     updateCart();
- }
+    toggleCart() {
+        try {
+            const cartSection = document.getElementById('cart');
+            if (!cartSection) return;
+            
+            cartSection.classList.toggle('visible');
+        } catch (error) {
+            console.error('Erro ao alternar carrinho:', error);
+        }
+    }
+
+    clearCart() {
+        try {
+            this.cart = [];
+            this.updateCart();
+            this.showNotification('Carrinho limpo!');
+        } catch (error) {
+            console.error('Erro ao limpar carrinho:', error);
+        }
+    }
+
+    showNotification(message, type = 'success') {
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new LojaApp();
+});
