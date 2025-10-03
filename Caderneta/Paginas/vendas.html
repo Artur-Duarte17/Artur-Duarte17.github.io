@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas - Vendas a Prazo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../theme.css" rel="stylesheet">
+</head>
+<body>
+<!-- Sidebar Container -->
+<div id="sidebarContainer"></div>
+
+<!-- Topbar Container -->
+<div id="topbarContainer"></div>
+
+
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Título e Ações -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="fw-semibold mb-0">Vendas a Crédito</h4>
+        <button class="btn btn-accent d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#newSaleOffcanvas">
+            <span class="material-icons me-2">add</span>
+            Nova Venda
+        </button>
+    </div>
+
+    <!-- Filtros -->
+    <div class="card border-0 bg-white p-4 mb-4">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Status</label>
+                <select class="form-select">
+                    <option value="">Todos</option>
+                    <option value="pending">Pendente</option>
+                    <option value="partial">Parcial</option>
+                    <option value="paid">Quitado</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Cliente</label>
+                <input type="text" class="form-control" placeholder="Buscar cliente">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Período</label>
+                <input type="date" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards de Vendas -->
+    <div class="row g-4">
+        <!-- Venda 1 -->
+        <div class="col-md-6 col-lg-4 fade-in">
+            <div class="card border-0 bg-white p-4 h-100">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h6 class="mb-1">#FV-0012</h6>
+                        <small class="text-muted">15/06/2023</small>
+                    </div>
+                    <span class="badge badge-status badge-pending">Pendente</span>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="avatar me-3">JS</div>
+                    <div>
+                        <h6 class="mb-0">João Silva</h6>
+                        <small class="text-muted">(11) 98765-4321</small>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted">Valor:</span>
+                        <span class="fw-bold">R$ 1.250,00</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted">Vencimento:</span>
+                        <span>15/07/2023</span>
+                    </div>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-primary flex-fill">
+                        <span class="material-icons me-1" style="font-size: 16px;">visibility</span>
+                        Ver
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary flex-fill edit-sale-btn" data-sale-id="1" data-client="João Silva" data-date="2023-06-15" data-value="1250.00" data-description="Compra de produtos">
+                        <span class="material-icons me-1" style="font-size: 16px;">edit</span>
+                        Editar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Venda 2 -->
+        <div class="col-md-6 col-lg-4 fade-in">
+            <div class="card border-0 bg-white p-4 h-100">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h6 class="mb-1">#FV-0011</h6>
+                        <small class="text-muted">14/06/2023</small>
+                    </div>
+                    <span class="badge badge-status badge-partial">Parcial</span>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="avatar me-3">MS</div>
+                    <div>
+                        <h6 class="mb-0">Maria Souza</h6>
+                        <small class="text-muted">(11) 98765-1234</small>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted">Valor:</span>
+                        <span class="fw-bold">R$ 890,00</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted">Vencimento:</span>
+                        <span>14/07/2023</span>
+                    </div>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-primary flex-fill">
+                        <span class="material-icons me-1" style="font-size: 16px;">visibility</span>
+                        Ver
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary flex-fill edit-sale-btn" data-sale-id="2" data-client="Maria Souza" data-date="2023-06-14" data-value="890.00" data-description="Produtos diversos">
+                        <span class="material-icons me-1" style="font-size: 16px;">edit</span>
+                        Editar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Venda 3 -->
+        <div class="col-md-6 col-lg-4 fade-in">
+            <div class="card border-0 bg-white p-4 h-100">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h6 class="mb-1">#FV-0010</h6>
+                        <small class="text-muted">10/06/2023</small>
+                    </div>
+                    <span class="badge badge-status badge-paid">Quitado</span>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="avatar me-3">CO</div>
+                    <div>
+                        <h6 class="mb-0">Carlos Oliveira</h6>
+                        <small class="text-muted">(11) 98765-5678</small>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted">Valor:</span>
+                        <span class="fw-bold">R$ 2.150,00</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted">Vencimento:</span>
+                        <span>10/07/2023</span>
+                    </div>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-primary flex-fill">
+                        <span class="material-icons me-1" style="font-size: 16px;">visibility</span>
+                        Ver
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary flex-fill edit-sale-btn" data-sale-id="3" data-client="Carlos Oliveira" data-date="2023-06-10" data-value="2150.00" data-description="Venda completa">
+                        <span class="material-icons me-1" style="font-size: 16px;">edit</span>
+                        Editar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Editar Venda -->
+<div class="modal fade" id="editSaleModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header modal-header-gradient">
+                <h5 class="modal-title text-white">Editar Venda a Crédito</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editSaleForm">
+                    <input type="hidden" id="editSaleId">
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Cliente *</label>
+                        <select id="editClientSelect" class="form-select" required>
+                            <option value="">Selecione um cliente</option>
+                            <option value="João Silva">João Silva</option>
+                            <option value="Maria Souza">Maria Souza</option>
+                            <option value="Carlos Oliveira">Carlos Oliveira</option>
+                            <option value="Ana Santos">Ana Santos</option>
+                        </select>
+                        <div class="invalid-feedback">Por favor, selecione um cliente</div>
+                    </div>
+                    
+                    <div class="row g-3 mb-3">
+                        <div class="col-6">
+                            <label class="form-label">Data da Venda *</label>
+                            <input type="date" id="editSaleDate" class="form-control" required>
+                            <div class="invalid-feedback">Por favor, informe uma data válida</div>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">Vencimento</label>
+                            <input type="date" id="editDueDate" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Valor Total *</label>
+                        <div class="input-group">
+                            <span class="input-group-text">R$</span>
+                            <input type="number" id="editSaleValue" step="0.01" min="0" class="form-control" required>
+                        </div>
+                        <div class="invalid-feedback">Por favor, informe um valor válido</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Descrição</label>
+                        <textarea id="editSaleDescription" class="form-control" rows="3" placeholder="Descreva os itens da venda..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" id="saveSaleBtn" class="btn btn-accent">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Offcanvas Nova Venda -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="newSaleOffcanvas" style="width: 500px;">
+    <div class="offcanvas-header modal-header-gradient">
+        <h5 class="offcanvas-title text-white">Nova Venda a Crédito</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Cliente *</label>
+                <select class="form-select" required>
+                    <option value="">Selecione um cliente</option>
+                    <option>João Silva</option>
+                    <option>Maria Souza</option>
+                    <option>Carlos Oliveira</option>
+                </select>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-6">
+                    <label class="form-label">Data da Venda *</label>
+                    <input type="date" class="form-control" required>
+                </div>
+                <div class="col-6">
+                    <label class="form-label">Vencimento *</label>
+                    <input type="date" class="form-control" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Valor Total *</label>
+                <div class="input-group">
+                    <span class="input-group-text">R$</span>
+                    <input type="number" step="0.01" class="form-control" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Descrição</label>
+                <textarea class="form-control" rows="3" placeholder="Descreva os itens da venda..."></textarea>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-accent">Registrar Venda</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/app.js"></script>
+<script>
+// Funcionalidade do modal de editar venda
+document.addEventListener('DOMContentLoaded', function() {
+    const editButtons = document.querySelectorAll('.edit-sale-btn');
+    const editModal = new bootstrap.Modal(document.getElementById('editSaleModal'));
+    const editForm = document.getElementById('editSaleForm');
+    const saveBtn = document.getElementById('saveSaleBtn');
+    
+    // Abrir modal de edição
+    editButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const saleId = this.dataset.saleId;
+            const client = this.dataset.client;
+            const date = this.dataset.date;
+            const value = this.dataset.value;
+            const description = this.dataset.description;
+            
+            // Preencher campos do modal
+            document.getElementById('editSaleId').value = saleId;
+            document.getElementById('editClientSelect').value = client;
+            document.getElementById('editSaleDate').value = date;
+            document.getElementById('editSaleValue').value = value;
+            document.getElementById('editSaleDescription').value = description;
+            
+            editModal.show();
+        });
+    });
+    
+    // Salvar alterações
+    saveBtn.addEventListener('click', function() {
+        if (validateForm()) {
+            // Simular salvamento
+            showToast('Venda atualizada com sucesso!', 'success');
+            editModal.hide();
+            editForm.reset();
+        }
+    });
+    
+    // Validação do formulário
+    function validateForm() {
+        let isValid = true;
+        const requiredFields = editForm.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                field.classList.remove('is-invalid');
+            }
+        });
+        
+        return isValid;
+    }
+});
+</script>
+</body>
+</html>
