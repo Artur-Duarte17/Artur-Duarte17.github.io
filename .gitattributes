@@ -1,0 +1,11 @@
+* text=auto
+*.js text eol=lf
+*.cjs text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.pdf binary
+*.woff2 binary
+# Preserve the official vendor distributions, including their whitespace.
+assets/vendor/*.js -whitespace

@@ -1,0 +1,16 @@
+{
+  "name": "artur-duarte-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfólio estático de Artur Duarte Monteiro",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.cjs",
+    "catalog": "node scripts/render-catalog.cjs",
+    "check": "node scripts/check.cjs",
+    "build": "node scripts/build.cjs",
+    "preview": "node scripts/serve.cjs --dist"
+  }
+}

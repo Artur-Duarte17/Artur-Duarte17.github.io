@@ -1,239 +1,610 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Página pessoal de Artur Duarte, desenvolvedor full-stack. Conheça minhas habilidades, projetos e trajetória profissional. Baixe meu currículo e conecte-se comigo.">
-    <meta name="keywords"
-        content="Artur Duarte, desenvolvedor, portfólio, full-stack, HTML, CSS, JavaScript, currículo, habilidades">
-    <meta name="author" content="Artur Duarte">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://artur-duarte17.github.io/">
-    <meta property="og:title" content="Artur Duarte - Desenvolvedor Full-Stack">
-    <meta property="og:description" content="Portfólio profissional de Artur Duarte, desenvolvedor full-stack especializado em HTML, CSS, JavaScript, Java e PHP.">
-    <meta property="og:image" content="https://artur-duarte17.github.io/image/Developer.jpeg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://artur-duarte17.github.io/">
-    <meta property="twitter:title" content="Artur Duarte - Desenvolvedor Full-Stack">
-    <meta property="twitter:description" content="Portfólio profissional de Artur Duarte, desenvolvedor full-stack especializado em HTML, CSS, JavaScript, Java e PHP.">
-    <meta property="twitter:image" content="https://artur-duarte17.github.io/image/Developer.jpeg">
-    
-    <title>Artur Duarte - Desenvolvedor Full-Stack | Portfólio</title>
-    <link rel="shortcut icon" type="imagex/png" href="image/Icon/icon_personal.jpg">
-    <link rel="canonical" href="https://artur-duarte17.github.io/">
-
-    <link rel="stylesheet" href="Css/index.css">
-    <link rel="stylesheet" href="Css/enhancements.css">
-</head>
-
-<body>
-
-    <header class="portfolio-header">
-        <nav>
-            <button id="button-toggle" class="button-toggle" aria-label="Abrir menu de navegação">
-                &#9776;
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="#about">Sobre mim</a></li>
-                <li><a href="Src/portifolio.html" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
-                <li><a href="Src/evento.html" target="_blank" rel="noopener noreferrer">Eventos</a></li>
-                <li><a href="Src/loja.html" target="_blank" rel="noopener noreferrer">Loja</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-
-        <div class="hero">
-            <h1>Eu sou <span class="highlight">Desenvolvedor</span> Artur Duarte</h1>
-            <p>Desenvolvedor reconhecido no IF Goiano, com contribuições relevantes em design e desenvolvimento de
-                software.</p>
-
-            <a href="Src/portifolio.html" class="btn-learn-more">Saber Mais</a>
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=XpkBu79jlpgK8YHr" class="btn-play-video">Assistir Vídeo</a>
-        </div>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Artur Duarte — desenvolvedor Full Stack. Experiência com Angular, Hono.js e PostgreSQL; projetos em Java e pesquisa em visão computacional."
+    />
+    <meta name="theme-color" content="#263630" />
+    <title>Artur Duarte · Desenvolvimento & pesquisa</title>
+    <link rel="canonical" href="https://artur-duarte17.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="Artur Duarte · Desenvolvimento & pesquisa"
+    />
+    <meta
+      property="og:description"
+      content="Entender o problema. Construir a solução. Projetos, experiência e pesquisa em software."
+    />
+    <meta property="og:url" content="https://artur-duarte17.github.io/" />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/catalog.js" defer></script>
+    <script src="assets/vendor/gsap.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/motion.js" defer></script>
+  </head>
+  <body>
+    <div class="reading-progress" aria-hidden="true"></div>
+    <a class="skip" href="#projetos">Ir para os projetos</a>
+    <header class="header wrap">
+      <a class="brand" href="#inicio" aria-label="Artur Duarte, início"
+        >AD<span>.</span></a
+      >
+      <nav id="main-navigation" aria-label="Navegação principal">
+        <a href="#projetos">Projetos</a><a href="#catalogo">Catálogo</a
+        ><a href="#sobre">Sobre</a><a href="#trajetoria">Trajetória</a>
+      </nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+        hidden
+      >
+        Menu</button
+      ><button
+        id="motion-toggle"
+        class="motion-toggle"
+        type="button"
+        aria-pressed="false"
+        hidden
+      >
+        Pausar movimento</button
+      ><a class="header-contact" href="#contato"
+        >Vamos conversar <span>↗</span></a
+      >
     </header>
-
-    <section id="about" class="about">
-        <h2>Quem eu sou?</h2>
-        <div class="container">
-            <img class="profile-pic" src="image/Developer.jpeg" alt="Foto do Desenvolvedor">
-            <div class="about-text">
-
-                <p>
-                    Sou desenvolvedor full-stack, formado em Sistemas de Informação, com uma base sólida em tecnologias
-                    como HTML, CSS, JavaScript, Java, PHP e bancos de dados.
-                </p>
-                <br>
-                <p>
-                    Minha paixão por solucionar problemas e criar soluções inovadoras me levou a contribuir em projetos
-                    significativos, consolidando minhas habilidades em programação e design de sistemas. Sempre em busca
-                    de evolução, acompanho as tendências e avanços tecnológicos, preparado para entregar resultados em
-                    todas as etapas do desenvolvimento de software.
-                </p>
-                <ul>
-                    <li><strong>Nacionalidade:</strong> Caldas Novas, Brasil</li>
-                    <li><strong>Email:</strong> monteiroarturduarte@gmail.com</li>
-                </ul>
-                <a href="Document/Currículo.pdf" download="Currículo.pdf" class="btn-download">Download Currículo</a>
-            </div>
+    <main>
+      <section id="inicio" class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> ARTUR DUARTE MONTEIRO</p>
+          <p class="professional-role">Desenvolvedor Full Stack</p>
+          <h1>
+            <span class="title-mask"
+              ><span class="title-line">Entender</span></span
+            ><span class="title-mask"
+              ><span class="title-line">o problema.</span></span
+            ><span class="title-mask"
+              ><span class="title-line">Construir a</span></span
+            ><span class="title-mask"
+              ><span class="title-line accent">solução.</span></span
+            >
+          </h1>
+          <p class="intro">
+            Tenho experiência com Angular, Hono.js e PostgreSQL. Nos projetos e
+            na pesquisa, exploro backend Java, sistemas distribuídos e visão
+            computacional.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projetos"
+              >Conheça meus projetos <span>↘</span></a
+            ><a class="text-link" href="#trajetoria">Minha experiência ↓</a>
+          </div>
+          <p class="hero-note">
+            Sistemas de Informação · IF Goiano<br />Conclusão prevista em
+            fevereiro de 2027
+          </p>
         </div>
-    </section>
-
-    <section id="education" class="education">
-        <h2>Educação</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>Diploma Ensino Médio</h3>
-                <p>2019 - 2021</p>
-                <p>Alta dedicação às disciplinas de exatas, com média geral igual ou superior a 8.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Sistema de Informação</h3>
-                <p>2022 - 2026</p>
-                <p>Graduação de Sistemas de Informação na Federal, com foco em desenvolvimento de soluções para
-                    empresas. Fortes habilidades técnicas e compromisso com resultados.</p>
-
-            </div>
+        <div
+          class="hero-art"
+          role="img"
+          aria-label="Composição em perspectiva conectando interface, lógica e dados"
+        >
+          <div class="art-top">
+            <span>EXPLORAR. CONECTAR. CONSTRUIR.</span><span>AD / 2026</span>
+          </div>
+          <div class="hero-orbit orbit-a"></div>
+          <div class="hero-orbit orbit-b"></div>
+          <div class="hero-orbit orbit-c"></div>
+          <div class="hero-core">
+            AD<span>.</span><small>DESENVOLVIMENTO<br />& PESQUISA</small>
+          </div>
+          <div class="float-panel float-ui">
+            <small>01 / EXPERIÊNCIA</small><strong>Interface</strong>
+            <div class="wire-window"><i></i><i></i><i></i></div>
+            <div class="wire-button"></div>
+          </div>
+          <div class="float-panel float-code">
+            <small>02 / COMPORTAMENTO</small><strong>Lógica</strong
+            ><code
+              >if (problema) {<br />&nbsp; entender();<br />&nbsp;
+              construir();<br />}</code
+            >
+          </div>
+          <div class="float-panel float-data">
+            <small>03 / PERSISTÊNCIA</small><strong>Dados</strong>
+            <div class="data-dots">● ● ●<br />● ● ●<br />● ● ●</div>
+          </div>
+          <span class="art-caption"
+            >PARTES CONECTADAS.<br />DECISÕES COM MOTIVO.</span
+          ><span class="art-coordinate">17° / 26°</span>
         </div>
-    </section>
-
-    <section id="service" class="service">
-        <h2>Serviços</h2>
-        <div class="list-service">
-
-            <ul class="left-column">
-                <li><strong>CONSULTORIA</strong> - Análise e solução personalizada para problemas de software.</li>
-                <li><strong>DESENVOLVIMENTO</strong> - Criação de sites e sistemas sob medida.</li>
-                <li><strong>FRONT-END</strong> - Design visual e experiência do usuário.</li>
-            </ul>
-            <ul class="right-column">
-                <li><strong>SUPORTE</strong> - Assistência técnica para manutenção de sistemas.</li>
-                <li><strong>BACK-END</strong> - Estrutura e segurança de dados.</li>
-                <li><strong>DESIGN</strong> - Criação de interfaces atraentes e funcionais.</li>
-            </ul>
-
+        <a class="scroll-cue" href="#conexoes"
+          ><span>DESÇA PARA EXPLORAR</span><b aria-hidden="true">↓</b></a
+        >
+      </section>
+      <div class="experience-brief wrap">
+        <span class="experience-label">EXPERIÊNCIA PROFISSIONAL</span>
+        <p>
+          <strong>VeroPsi</strong
+          ><span
+            >Desenvolvimento de questionários: interface, regras de negócio e
+            dados.</span
+          >
+        </p>
+        <a href="#trajetoria"
+          >Ver minha atuação <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <div class="tech-strip">
+        <div class="wrap">
+          <span>NA PRÁTICA</span>
+          <p>
+            Angular <i>·</i> Hono.js <i>·</i> PostgreSQL <i>·</i> Java / Spring
+            Boot <i>·</i> Python <i>·</i> Flutter
+          </p>
         </div>
-
-
-    </section>
-
-    <section id="skills" class="skills">
-        <h2>Minhas Habilidades</h2>
-        <div class="skills-list">
-
-            <div class="skill">
-                <p>Liderança</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 75%;">75%</div>
-                </div>
-
+      </div>
+      <section
+        id="conexoes"
+        class="connection-story"
+        aria-labelledby="connection-title"
+      >
+        <div class="connection-stage">
+          <div class="story-heading wrap">
+            <p class="eyebrow">DA IDEIA AO SISTEMA</p>
+            <h2 id="connection-title">
+              As partes mudam.<br /><span>A conexão importa.</span>
+            </h2>
+            <p>
+              Interface, regras e dados.<br />Meu trabalho acontece entre eles.
+            </p>
+          </div>
+          <div class="connection-visual" aria-hidden="true">
+            <svg
+              class="connection-wires"
+              viewBox="0 0 1000 320"
+              preserveAspectRatio="none"
+            >
+              <path d="M170 160 H500 H830" />
+              <path class="signal" d="M170 160 H500 H830" />
+            </svg>
+            <div class="system-tile tile-interface">
+              <small>01 / INTERFACE</small><strong>O que se usa.</strong>
+              <div class="tile-browser">
+                <span></span><span></span><i></i><i></i>
+              </div>
+              <em>Angular · Flutter</em>
             </div>
-            <div class="skill">
-                <p>Java</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 65%;">65%</div>
-                </div>
-
+            <div class="system-tile tile-logic">
+              <small>02 / LÓGICA</small><strong>O que conecta.</strong>
+              <div class="code-mark">{<span>→</span>}</div>
+              <em>Java · Hono.js</em>
             </div>
-            <div class="skill">
-                <p>Banco de Dados</p>
-
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 90%;">90%</div>
-                </div>
+            <div class="system-tile tile-data">
+              <small>03 / DADOS</small><strong>O que permanece.</strong>
+              <div class="database-shape"><i></i><i></i><i></i></div>
+              <em>PostgreSQL · Pesquisa</em>
             </div>
-            <div class="skill">
-                <p>Web Design</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 85%;">85%</div>
-                </div>
-
-            </div>
-            <div class="skill">
-                <p>Paciência</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 60%;">60%</div>
-                </div>
-
-            </div>
-            <div class="skill">
-                <p>Aprendizado</p>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 80%;">80%</div>
-                </div>
-            </div>
-
+          </div>
+          <div class="story-bottom wrap">
+            <span>UMA VISÃO DO TODO</span>
+            <div class="story-track"><i></i></div>
+            <a href="#projetos">Veja isso nos projetos <span>↗</span></a>
+          </div>
         </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Entre em Contato</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-icon">📧</span>
-                    <div>
-                        <h3>Email</h3>
-                        <p>monteiroarturduarte@gmail.com</p>
-                    </div>
+      </section>
+      <section id="projetos" class="section wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / PROJETOS SELECIONADOS</p>
+            <h2>Código com contexto.</h2>
+          </div>
+          <p>
+            Veja o problema resolvido e minha contribuição.<br />Os detalhes
+            técnicos ficam a um clique.
+          </p>
+        </div>
+        <div class="featured-grid">
+          <article class="project-card">
+            <a
+              class="project-visual visual-fotuni"
+              href="#projeto-fotuni"
+              data-project="fotuni"
+              aria-label="Conhecer o projeto Fotuni"
+              ><div class="visual-label">VISÃO COMPUTACIONAL / PYTHON</div>
+              <div class="photo-stack">
+                <div class="landscape back-photo"></div>
+                <div class="landscape middle-photo"></div>
+                <div class="landscape front-photo">
+                  <span class="sun"></span>
+                  <div class="mountain"></div>
+                  <div class="scan"></div>
                 </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📍</span>
-                    <div>
-                        <h3>Localização</h3>
-                        <p>Caldas Novas, Brasil</p>
-                    </div>
-                </div>
+                <span class="photo-tag">referência → semelhança</span>
+              </div>
+              <span class="visual-index">01</span
+              ><span class="visual-arrow">↗</span></a
+            >
+            <div class="card-content">
+              <div class="card-title">
+                <h3>Fotuni</h3>
+                <span>Pesquisa individual</span>
+              </div>
+              <p>
+                Encontrar uma pessoa em um álbum ou recuperar fotografias
+                visualmente parecidas.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>Streamlit</span
+                ><span>Visão computacional</span>
+              </div>
+              <p class="contribution">
+                <strong>Minha contribuição</strong>Aplicação e pesquisa em
+                recuperação de imagens.
+              </p>
+              <a
+                class="detail-button"
+                href="#projeto-fotuni"
+                data-project="fotuni"
+                >Conhecer Fotuni <span aria-hidden="true">↗</span></a
+              >
             </div>
-            
-            <form id="contact-form" class="contact-form">
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu email" required>
-                <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-                <button type="submit">Enviar Mensagem</button>
-            </form>
+          </article>
+          <article class="project-card">
+            <a
+              class="project-visual visual-caderneta"
+              href="#projeto-caderneta"
+              data-project="caderneta"
+              aria-label="Conhecer o projeto Caderneta"
+              ><div class="visual-label">INTERFACE WEB / FLUTTER</div>
+              <div class="mini-app">
+                <div class="mini-sidebar">
+                  <b>c.</b><span></span><span></span><span></span>
+                </div>
+                <div class="mini-content">
+                  <div class="mini-top">Visão geral <span>●</span></div>
+                  <div class="mini-stats">
+                    <div><small>Clientes</small><b>—</b></div>
+                    <div><small>Vendas a prazo</small><b>—</b></div>
+                  </div>
+                  <div class="mini-chart">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="mini-row"></div>
+                  <div class="mini-row short"></div>
+                  <small class="mini-caption">Ilustração da interface</small>
+                </div>
+              </div>
+              <span class="visual-index">02</span
+              ><span class="visual-arrow">↗</span></a
+            >
+            <div class="card-content">
+              <div class="card-title">
+                <h3>Caderneta</h3>
+                <span>Projeto em equipe</span>
+              </div>
+              <p>
+                Gestão de vendas a prazo, clientes e pagamentos com uma
+                interface conectada à API.
+              </p>
+              <div class="tags">
+                <span>Flutter Web</span><span>Integração REST</span
+                ><span>Scrum</span>
+              </div>
+              <p class="contribution">
+                <strong>Minha contribuição</strong>Frontend e gestão do projeto
+                com Scrum.
+              </p>
+              <a
+                class="detail-button"
+                href="#projeto-caderneta"
+                data-project="caderneta"
+                >Conhecer Caderneta <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          <article class="project-card">
+            <a
+              class="project-visual visual-system"
+              href="#projeto-academico"
+              data-project="academico"
+              aria-label="Conhecer o Sistema Acadêmico"
+              ><div class="visual-label">SISTEMAS DISTRIBUÍDOS / JAVA</div>
+              <div class="system-diagram">
+                <span class="service-box">Aluno</span><b>↔</b
+                ><span class="service-box emphasis">Matrícula</span><b>↔</b
+                ><span class="service-box">Turma</span>
+                <div class="event-line">
+                  ↓ &nbsp; eventos / RabbitMQ &nbsp; ↓
+                </div>
+                <span class="service-box bottom-box"
+                  >Histórico + Notificações</span
+                >
+              </div>
+              <span class="visual-index">03</span
+              ><span class="visual-arrow">↗</span></a
+            >
+            <div class="card-content">
+              <div class="card-title">
+                <h3>Sistema Acadêmico</h3>
+                <span>Projeto em equipe</span>
+              </div>
+              <p>
+                Serviços que se comunicam para coordenar matrículas, vagas e
+                eventos acadêmicos.
+              </p>
+              <div class="tags">
+                <span>Spring Boot</span><span>gRPC</span><span>RabbitMQ</span>
+              </div>
+              <p class="contribution">
+                <strong>Minha contribuição</strong>Atuação compartilhada em RPC,
+                Eureka, Aluno e Matrícula.
+              </p>
+              <a
+                class="detail-button"
+                href="#projeto-academico"
+                data-project="academico"
+                >Conhecer Sistema Acadêmico Distribuído
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          <article class="project-card">
+            <a
+              class="project-visual visual-movel"
+              href="#projeto-movel"
+              data-project="movel"
+              aria-label="Conhecer o MovelControl"
+              ><div class="visual-label">API REST / JAVA</div>
+              <div class="api-illustration">
+                <span>POST <i>/pedidos</i></span>
+                <pre>{<br>  "orcamentoId": 17,<br>  "status": "ABERTO"<br>}</pre>
+                <div>201 <span>Created</span><b>↵</b></div>
+              </div>
+              <span class="visual-index">04</span
+              ><span class="visual-arrow">↗</span></a
+            >
+            <div class="card-content">
+              <div class="card-title">
+                <h3>MovelControl</h3>
+                <span>Projeto em equipe</span>
+              </div>
+              <p>
+                API para a gestão de uma marcenaria, com pedidos e orçamentos.
+              </p>
+              <div class="tags">
+                <span>Java</span><span>Spring Boot</span><span>JPA</span>
+              </div>
+              <p class="contribution">
+                <strong>Minha contribuição</strong>Módulos de Pedido e
+                Orçamento.
+              </p>
+              <a
+                class="detail-button"
+                href="#projeto-movel"
+                data-project="movel"
+                >Conhecer MovelControl <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
         </div>
-        
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/artur-duarte-monteiro-7a69922b2/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-            </a>
-            <a href="https://github.com/Artur-Duarte17" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/arturduartemonteiro/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-            </a>
+      </section>
+      <section id="catalogo" class="catalog-section">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / CATÁLOGO DE PROJETOS</p>
+              <h2>Encontre o que procura.</h2>
+            </div>
+            <p>
+              Filtre por área ou busque pelo nome e pela tecnologia.<br />Abra
+              os detalhes para conhecer minha participação.
+            </p>
+          </div>
+          <div class="catalog-tools" hidden>
+            <label for="project-search">Buscar projeto ou tecnologia</label>
+            <div class="search-row">
+              <input
+                id="project-search"
+                type="search"
+                placeholder="Ex.: Java, Flutter, visão computacional"
+                autocomplete="off"
+                aria-controls="catalog-list"
+              /><button id="clear-filters" type="button">
+                Limpar busca e filtros
+              </button>
+            </div>
+            <div class="filters" role="group" aria-label="Filtrar projetos">
+              <button class="active" data-filter="Todos" aria-pressed="true">
+                Todos</button
+              ><button data-filter="Web" aria-pressed="false">Web</button
+              ><button data-filter="Backend" aria-pressed="false">
+                Backend</button
+              ><button data-filter="Mobile" aria-pressed="false">Mobile</button
+              ><button data-filter="Pesquisa" aria-pressed="false">
+                Pesquisa & dados</button
+              ><button data-filter="Fundamentos" aria-pressed="false">
+                Fundamentos
+              </button>
+            </div>
+          </div>
+          <div class="catalog-status">
+            <p id="result-count" role="status" aria-live="polite">
+              15 projetos e grupos de projetos
+            </p>
+            <span>Selecione um projeto para abrir os detalhes</span>
+          </div>
+          <div id="catalog-list" class="catalog-list">
+            <!-- catalog:start -->
+<details class="catalog-entry" id="projeto-fotuni" data-category="Pesquisa" data-search="Fotuni Pesquisa Python Streamlit InsightFace / ArcFace ResNet50 Busca de fotografias por pessoa e semelhança visual. Pesquisa individual"><summary><span class="catalog-number">01</span><span class="catalog-description"><span class="catalog-title">Fotuni</span><span class="catalog-summary">Busca de fotografias por pessoa e semelhança visual.</span><span class="catalog-stack">Python · Streamlit · InsightFace / ArcFace · ResNet50</span></span><span class="catalog-kind">Pesquisa</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Pesquisa individual</p><div class="case-grid"><section><h3>O problema</h3><p>Encontrar fotografias relevantes em um álbum sem depender apenas de uma revisão manual de todos os arquivos.</p></section><section><h3>Minha participação</h3><p>Código individual da aplicação e da pesquisa em recuperação de imagens. O repositório reúne interface, indexação, ranking e testes.</p></section><section><h3>Decisões de implementação</h3><p>O processamento e os índices ficam no computador. A aplicação oferece busca facial e visual; o código de ranking separa as regras de busca dos adaptadores de modelos e armazenamento.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>A pontuação representa semelhança, não certeza de identidade. A fusão facial + global é experimental. Uma demonstração pública deve usar imagens autorizadas, sem fotografias de crianças.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/Projeto_de_Pesquisa" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-caderneta" data-category="Web" data-search="Caderneta Web Flutter Web Dart REST Scrum Interface para gestão de vendas a prazo, clientes e pagamentos. Projeto em equipe"><summary><span class="catalog-number">02</span><span class="catalog-description"><span class="catalog-title">Caderneta</span><span class="catalog-summary">Interface para gestão de vendas a prazo, clientes e pagamentos.</span><span class="catalog-stack">Flutter Web · Dart · REST · Scrum</span></span><span class="catalog-kind">Web</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Projeto em equipe</p><div class="case-grid"><section><h3>O problema</h3><p>Organizar o acompanhamento de vendas a prazo e pagamentos, com acessos diferentes para operação e consulta pelo cliente.</p></section><section><h3>Minha participação</h3><p>Frontend e gestão do projeto com Scrum. O backend faz parte do trabalho em equipe e não é apresentado como autoria minha.</p></section><section><h3>Decisões de implementação</h3><p>Interface integrada à API, com sessão, navegação por perfil e estados de carregamento e erro. O frontend atual está escrito em Flutter Web.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>O sistema completo depende do backend e do banco de dados. A ilustração conceitual representa a ideia da interface; não é uma captura do produto.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/Caderneta" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-academico" data-category="Backend" data-search="Sistema Acadêmico Distribuído Backend Java Spring Boot gRPC RabbitMQ Eureka Docker Microsserviços para matrículas, vagas e eventos acadêmicos. Projeto em equipe"><summary><span class="catalog-number">03</span><span class="catalog-description"><span class="catalog-title">Sistema Acadêmico Distribuído</span><span class="catalog-summary">Microsserviços para matrículas, vagas e eventos acadêmicos.</span><span class="catalog-stack">Java · Spring Boot · gRPC · RabbitMQ · Eureka · Docker</span></span><span class="catalog-kind">Backend</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Projeto em equipe</p><div class="case-grid"><section><h3>O problema</h3><p>Coordenar operações de matrícula entre serviços independentes, com comunicação síncrona e eventos assíncronos.</p></section><section><h3>Minha participação</h3><p>Atuação compartilhada nas frentes de RPC, Eureka, Aluno e Matrícula. O sistema foi desenvolvido em equipe.</p></section><section><h3>Decisões de implementação</h3><p>gRPC no fluxo de reserva de vagas, Feign em consultas e RabbitMQ para eventos. O serviço de matrícula tenta compensar a reserva se a gravação local falhar.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>Projeto acadêmico. A publicação de eventos é best-effort e não deve ser descrita como entrega garantida. Os vários repositórios de serviços compõem um único projeto.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/sd_academico_docs" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-movel" data-category="Backend" data-search="MovelControl Backend Java Spring Boot JPA REST API de gestão para marcenaria, com pedidos e orçamentos. Projeto em equipe"><summary><span class="catalog-number">04</span><span class="catalog-description"><span class="catalog-title">MovelControl</span><span class="catalog-summary">API de gestão para marcenaria, com pedidos e orçamentos.</span><span class="catalog-stack">Java · Spring Boot · JPA · REST</span></span><span class="catalog-kind">Backend</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Projeto em equipe</p><div class="case-grid"><section><h3>O problema</h3><p>Representar os processos de uma marcenaria por meio de uma API com entidades e regras de negócio.</p></section><section><h3>Minha participação</h3><p>Contribuições nos módulos de Pedido e Orçamento. O repositório registra outros colaboradores responsáveis por outras partes do sistema.</p></section><section><h3>Decisões de implementação</h3><p>Separação em controller, service, repository e DTO. O código de Pedido relaciona o pedido a um orçamento e constrói respostas com links HATEOAS.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>O projeto tem escopo acadêmico. A presença de testes no repositório não equivale a validação de produção; os testes da API não foram executados na preparação deste portfólio.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/MovelControl" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-vizinhos" data-category="Mobile" data-search="Entre Vizinhos Mobile Kotlin Android Firebase Marketplace local para conectar compradores e vendedores. Projeto acadêmico em equipe"><summary><span class="catalog-number">05</span><span class="catalog-description"><span class="catalog-title">Entre Vizinhos</span><span class="catalog-summary">Marketplace local para conectar compradores e vendedores.</span><span class="catalog-stack">Kotlin · Android · Firebase</span></span><span class="catalog-kind">Mobile</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Projeto acadêmico em equipe</p><div class="case-grid"><section><h3>O problema</h3><p>Centralizar ofertas de produtos e serviços locais que ficam dispersas em grupos de mensagens.</p></section><section><h3>Minha participação</h3><p>Planejamento, requisitos e camada de dados/autenticação, conforme os registros profissionais fornecidos.</p></section><section><h3>Decisões de implementação</h3><p>Aplicativo Android com autenticação Firebase e dados no Firestore. O repositório descreve feed, categorias e gerenciamento de anúncios.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>Há funcionalidades e validações pendentes registradas no README. É apresentado como projeto em desenvolvimento.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/Entre_Vizinhos" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-macauba" data-category="Pesquisa" data-search="Sementes de macaúba Pesquisa Python PyTorch YOLO Machine learning Estimativa de risco de contaminação posterior em sementes. Pesquisa aplicada"><summary><span class="catalog-number">06</span><span class="catalog-description"><span class="catalog-title">Sementes de macaúba</span><span class="catalog-summary">Estimativa de risco de contaminação posterior em sementes.</span><span class="catalog-stack">Python · PyTorch · YOLO · Machine learning</span></span><span class="catalog-kind">Pesquisa</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Pesquisa aplicada</p><div class="case-grid"><section><h3>O problema</h3><p>Investigar associações entre imagens iniciais, metadados experimentais e contaminação observada posteriormente.</p></section><section><h3>Minha participação</h3><p>Pesquisa aplicada com pipeline de preparação, classificação, avaliação e triagem.</p></section><section><h3>Decisões de implementação</h3><p>Comparação de modelos e cenários usando imagens, recortes e metadados. O enquadramento do problema distingue predição de risco de observação direta de infecção.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>Não é uma IA que detecta infecção visível nas imagens iniciais. Resultados e limites precisam acompanhar qualquer conclusão científica.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/classificacao-sementes-macauba" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-credito" data-category="Pesquisa" data-search="Credit Default Prediction Pesquisa R Machine learning Validação cruzada Pipeline de comparação de modelos para risco de inadimplência. Projeto individual"><summary><span class="catalog-number">07</span><span class="catalog-description"><span class="catalog-title">Credit Default Prediction</span><span class="catalog-summary">Pipeline de comparação de modelos para risco de inadimplência.</span><span class="catalog-stack">R · Machine learning · Validação cruzada</span></span><span class="catalog-kind">Pesquisa</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Projeto individual</p><div class="case-grid"><section><h3>O problema</h3><p>Comparar modelos de classificação com atenção à sensibilidade, especificidade e seleção de limiar.</p></section><section><h3>Minha participação</h3><p>Projeto individual de aprendizado de máquina tabular em R.</p></section><section><h3>Decisões de implementação</h3><p>O protocolo documentado separa exploração e confirmação. O teste final fica reservado para avaliação; balanceamento e calibração são realizados no treinamento.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>Experimento com uma base de dados, sem alegação de uso em concessão real de crédito. Métricas dependem do cenário de avaliação.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/credit-default-prediction-r" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-drug" data-category="Pesquisa" data-search="Drug Consumption Project Pesquisa R caret Classificação Experimentos de classificação e comparação com um artigo. Projeto individual"><summary><span class="catalog-number">08</span><span class="catalog-description"><span class="catalog-title">Drug Consumption Project</span><span class="catalog-summary">Experimentos de classificação e comparação com um artigo.</span><span class="catalog-stack">R · caret · Classificação</span></span><span class="catalog-kind">Pesquisa</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Projeto individual</p><div class="case-grid"><section><h3>O problema</h3><p>Reproduzir e investigar resultados de classificação binária em uma base de consumo de drogas.</p></section><section><h3>Minha participação</h3><p>Projeto individual em R com organização da pipeline, experimentos e avaliação.</p></section><section><h3>Decisões de implementação</h3><p>Scripts separados para pré-processamento, balanceamento, métricas, treino e geração de tabelas e gráficos.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>Projeto de pesquisa e aprendizado. Os resultados não representam diagnóstico individual nem uma aplicação clínica.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/drug_consumption_project" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-web" data-category="Web" data-search="Portfólio pessoal Web HTML CSS JavaScript GSAP Site estático com apresentação profissional e catálogo de projetos. Portfólio profissional"><summary><span class="catalog-number">09</span><span class="catalog-description"><span class="catalog-title">Portfólio pessoal</span><span class="catalog-summary">Site estático com apresentação profissional e catálogo de projetos.</span><span class="catalog-stack">HTML · CSS · JavaScript · GSAP</span></span><span class="catalog-kind">Web</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Portfólio profissional</p><div class="case-grid"><section><h3>O problema</h3><p>Apresentar experiência, pesquisa e projetos em um único endereço, permitindo explorar tecnologias e participação individual.</p></section><section><h3>Minha participação</h3><p>Organização da apresentação profissional e dos projetos, com contexto, decisões e limites de cada trabalho.</p></section><section><h3>Decisões de implementação</h3><p>Conteúdo estático com detalhes nativos, busca no navegador e animações como melhoria progressiva. Publicação preparada para GitHub Pages.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>As ilustrações são conceituais. O site apresenta os projetos; as aplicações completas e suas dependências ficam nos respectivos repositórios.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/Artur-Duarte17.github.io" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-quarkus" data-category="Backend" data-search="Mensagens com Quarkus Backend Java Quarkus HTTP API simples para estudar comunicação request/reply. Atividade acadêmica"><summary><span class="catalog-number">10</span><span class="catalog-description"><span class="catalog-title">Mensagens com Quarkus</span><span class="catalog-summary">API simples para estudar comunicação request/reply.</span><span class="catalog-stack">Java · Quarkus · HTTP</span></span><span class="catalog-kind">Backend</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Atividade acadêmica</p><div class="case-grid"><section><h3>O problema</h3><p>Relacionar comunicação HTTP com passagem de mensagens entre processos.</p></section><section><h3>Minha participação</h3><p>Atividade acadêmica de implementação de uma API de mensagens.</p></section><section><h3>Decisões de implementação</h3><p>Endpoints para criar, consultar e remover mensagens, com armazenamento em memória.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>Exercício sem banco de dados ou autenticação, com foco no mecanismo de comunicação.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/http-quarkus-mensagens" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-relogio" data-category="Fundamentos" data-search="Relógio mundial TCP / UDP Fundamentos Java Sockets Concorrência Três versões para comparar comunicação e atendimento concorrente. Atividade acadêmica"><summary><span class="catalog-number">11</span><span class="catalog-description"><span class="catalog-title">Relógio mundial TCP / UDP</span><span class="catalog-summary">Três versões para comparar comunicação e atendimento concorrente.</span><span class="catalog-stack">Java · Sockets · Concorrência</span></span><span class="catalog-kind">Fundamentos</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Atividade acadêmica</p><div class="case-grid"><section><h3>O problema</h3><p>Consultar horários de diferentes fusos por comunicação cliente-servidor.</p></section><section><h3>Minha participação</h3><p>Atividade acadêmica com versões UDP, TCP sequencial e TCP com múltiplas threads.</p></section><section><h3>Decisões de implementação</h3><p>Comparação prática de DatagramSocket, conexão TCP e concorrência no atendimento.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>Exercício de redes e sistemas distribuídos, com execução local documentada.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/Sistema-Distribuido-de-Relogio-Mundial-TCP-UDP-" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-flutter" data-category="Mobile" data-search="Calculadora em Flutter Mobile Flutter Dart Exercício de interface e lógica de uma calculadora. Exercício"><summary><span class="catalog-number">12</span><span class="catalog-description"><span class="catalog-title">Calculadora em Flutter</span><span class="catalog-summary">Exercício de interface e lógica de uma calculadora.</span><span class="catalog-stack">Flutter · Dart</span></span><span class="catalog-kind">Mobile</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Exercício</p><div class="case-grid"><section><h3>O problema</h3><p>Praticar composição de interface e tratamento de operações.</p></section><section><h3>Minha participação</h3><p>Exercício de aprendizagem em Flutter.</p></section><section><h3>Decisões de implementação</h3><p>Interface e lógica de interação reunidas em uma aplicação pequena.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>O README ainda é o padrão do projeto. É um trabalho complementar, apresentado como exercício.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/calculadora_em_flutter" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-android" data-category="Mobile" data-search="Exercícios Android Mobile Kotlin Android Atividades de programação para dispositivos móveis. Atividades acadêmicas"><summary><span class="catalog-number">13</span><span class="catalog-description"><span class="catalog-title">Exercícios Android</span><span class="catalog-summary">Atividades de programação para dispositivos móveis.</span><span class="catalog-stack">Kotlin · Android</span></span><span class="catalog-kind">Mobile</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Atividades acadêmicas</p><div class="case-grid"><section><h3>O problema</h3><p>Praticar os fundamentos de desenvolvimento de aplicações Android.</p></section><section><h3>Minha participação</h3><p>Atividades acadêmicas registradas nos repositórios ProvaPDM_ADM e Estadoscombandeira.</p></section><section><h3>Decisões de implementação</h3><p>Projetos pequenos voltados ao aprendizado e à avaliação da disciplina.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>A documentação disponível é breve. Não são apresentados como produtos completos.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/ProvaPDM_ADM" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-bootstrap" data-category="Fundamentos" data-search="Estudos de Bootstrap Fundamentos HTML Bootstrap Experimentos com grids, containers e breakpoints. Exercícios"><summary><span class="catalog-number">14</span><span class="catalog-description"><span class="catalog-title">Estudos de Bootstrap</span><span class="catalog-summary">Experimentos com grids, containers e breakpoints.</span><span class="catalog-stack">HTML · Bootstrap</span></span><span class="catalog-kind">Fundamentos</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Exercícios</p><div class="case-grid"><section><h3>O problema</h3><p>Entender a organização de layouts responsivos.</p></section><section><h3>Minha participação</h3><p>Exercícios de fundamentos do frontend.</p></section><section><h3>Decisões de implementação</h3><p>Páginas pequenas para explorar o sistema de grid e os pontos de quebra.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>Repositório de estudo com documentação limitada.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/Curso-Bootstrap" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<details class="catalog-entry" id="projeto-pubsub" data-category="Fundamentos" data-search="Publish / Subscribe Fundamentos Sistemas distribuídos Atividade complementar sobre publicação e assinatura. Atividade acadêmica"><summary><span class="catalog-number">15</span><span class="catalog-description"><span class="catalog-title">Publish / Subscribe</span><span class="catalog-summary">Atividade complementar sobre publicação e assinatura.</span><span class="catalog-stack">Sistemas distribuídos</span></span><span class="catalog-kind">Fundamentos</span><span class="catalog-toggle"><span class="expand-word">Detalhes</span><span class="collapse-word">Fechar</span> <span class="toggle-symbol" aria-hidden="true">+</span></span></summary><div class="catalog-details"><p class="project-context">Atividade acadêmica</p><div class="case-grid"><section><h3>O problema</h3><p>Explorar o padrão de comunicação entre publicadores e assinantes.</p></section><section><h3>Minha participação</h3><p>Atividade de estudo registrada no GitHub.</p></section><section><h3>Decisões de implementação</h3><p>O repositório é mantido como referência de aprendizagem. O Sistema Acadêmico é o caso mais desenvolvido de mensageria neste portfólio.</p></section></div><details class="technical-note"><summary>Contexto e limites do projeto</summary><p>A documentação não detalha o funcionamento. O cartão aponta para o código sem atribuir resultados não verificados.</p></details><a class="repo-link" href="https://github.com/Artur-Duarte17/PublishSubscirbe" target="_blank" rel="noopener noreferrer">Ver código no GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></div></details>
+<!-- catalog:end -->
+          </div>
+          <div id="empty-state" class="empty-state" hidden>
+            <h3>Nenhum projeto encontrado.</h3>
+            <p>
+              Tente outra tecnologia ou remova os filtros para ver o catálogo
+              completo.
+            </p>
+            <button id="reset-empty" class="button primary">
+              Mostrar todos os projetos
+            </button>
+          </div>
+          <noscript
+            ><p class="noscript-note">
+              O catálogo completo funciona sem JavaScript. Abra os detalhes de
+              cada projeto; a busca e os filtros são recursos adicionais.
+            </p></noscript
+          >
         </div>
-    </section>
-
-    <!-- Botão Voltar ao Topo -->
-    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
-        ↑
-    </button>
-    
-    <!-- Notificações -->
-    <div id="notification-container" class="notification-container"></div>
-
-    <footer>
-        <p>"Dizem que beleza cansa, mas estou sempre cansado e nada belo." - Artur, 2023</p>
-        <p>&copy; 2024 Artur Duarte. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="JavaScript/index.js"></script>
-
-</body>
-
+      </section>
+      <section id="sobre" class="section wrap about-grid">
+        <div>
+          <p class="eyebrow">03 / SOBRE MIM</p>
+          <h2>Gosto de entender<br />o porquê.</h2>
+          <div class="signature">Artur Duarte<span>↗</span></div>
+        </div>
+        <div class="about-copy">
+          <p class="large-copy">
+            Sou estudante de Sistemas de Informação e desenvolvedor com
+            experiência em aplicações web.
+          </p>
+          <p>
+            Na VeroPsi, trabalhei com Angular, Hono.js e PostgreSQL em uma
+            funcionalidade de questionários psicológicos, conectando interface,
+            regras de negócio e dados.
+          </p>
+          <p>
+            Nos projetos acadêmicos e na pesquisa, exploro backend Java,
+            comunicação entre serviços e visão computacional. Gosto de
+            investigar o problema, conectar as partes e conferir se a solução
+            faz sentido na prática.
+          </p>
+          <div class="principles">
+            <div>
+              <span>01</span>
+              <h3>Entender antes</h3>
+              <p>Conhecer o problema e as regras que orientam a solução.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Explicar as escolhas</h3>
+              <p>Mostrar o raciocínio por trás do que foi construído.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Aprender e ajustar</h3>
+              <p>Rever decisões quando os resultados mostram outro caminho.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="trajetoria" class="trajectory wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 / TRAJETÓRIA</p>
+            <h2>Experiência que se conecta.</h2>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <span class="timeline-date">JAN — JUL 2026</span>
+          <div>
+            <h3>Desenvolvedor Full Stack <span>· VeroPsi</span></h3>
+            <p>
+              Questionários psicológicos: modelagem de dados, regras de negócio,
+              interfaces e integração entre camadas.
+            </p>
+            <div class="tags">
+              <span>Angular</span><span>Hono.js</span><span>PostgreSQL</span>
+            </div>
+          </div>
+          <span class="timeline-type">EXPERIÊNCIA PROFISSIONAL</span>
+        </div>
+        <div class="timeline-row">
+          <span class="timeline-date">2022 — FEV 2027*</span>
+          <div>
+            <h3>Sistemas de Informação <span>· IF Goiano</span></h3>
+            <p>
+              Bacharelado no Campus Urutaí. Projetos de desenvolvimento de
+              software e pesquisa aplicada.
+            </p>
+            <small>* Previsão de conclusão.</small>
+          </div>
+          <span class="timeline-type">FORMAÇÃO EM ANDAMENTO</span>
+        </div>
+      </section>
+      <section id="contato" class="contact-section">
+        <div class="wrap contact-inner">
+          <div>
+            <p class="eyebrow">05 / CONTATO</p>
+            <h2>Tem um problema<br />para resolver?</h2>
+            <p>
+              Podemos conversar sobre desenvolvimento,<br />projetos e
+              oportunidades.
+            </p>
+            <a class="contact-email" href="mailto:monteiroarturduarte@gmail.com"
+              >monteiroarturduarte@gmail.com <span>↗</span></a
+            >
+          </div>
+          <div class="contact-links">
+            <a
+              href="https://github.com/Artur-Duarte17"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub <span>↗</span></a
+            ><a
+              href="https://www.linkedin.com/in/artur-duarte-monteiro-7a69922b2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn <span>↗</span></a
+            ><button id="copy-email" hidden>Copiar email <span>⧉</span></button
+            ><span id="copy-status" role="status"></span>
+          </div>
+        </div>
+        <footer class="wrap">
+          <a class="brand" href="#inicio" aria-label="Artur Duarte, início"
+            >AD<span>.</span></a
+          >
+          <p>
+            Artur Duarte Monteiro · Desenvolvimento & pesquisa<br /><span
+              class="updated-note"
+              >Conteúdo revisado em novembro de 2026</span
+            >
+          </p>
+          <a href="#inicio">Voltar ao início ↑</a>
+        </footer>
+      </section>
+    </main>
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-top">
+        <span class="eyebrow">POR DENTRO DO PROJETO</span
+        ><button id="close-dialog" aria-label="Fechar detalhes">
+          Fechar <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+      <div id="dialog-content"></div>
+    </dialog>
+  </body>
 </html>

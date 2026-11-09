@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://artur-duarte17.github.io/sitemap.xml
-
-# Disallow specific files
-Disallow: /JavaScript/
-Disallow: /Css/
-Disallow: *.pdf

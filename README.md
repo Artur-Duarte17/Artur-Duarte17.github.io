@@ -1,142 +1,60 @@
-# Projeto de Desenvolvimento Web - IF Goiano  
+# Artur Duarte · Desenvolvimento & pesquisa
 
-Este repositório contém os arquivos do projeto final da **primeira parte da disciplina de Desenvolvimento Web I**, do IF Goiano. O projeto inclui seis páginas web, desenvolvidas com **HTML**, **CSS** e **JavaScript**, demonstrando habilidades em design, interatividade e programação.
+Portfólio profissional estático com projetos, experiência e pesquisa aplicada. HTML semântico, CSS e JavaScript, com GSAP/ScrollTrigger locais para a coreografia de movimento. Sem framework, dependências npm ou servidor de aplicação em produção.
 
----
+## Executar
 
-## 🎯 **Objetivo do Projeto**  
-Desenvolver um conjunto de páginas funcionais e interativas, explorando os conceitos aprendidos na disciplina, com foco em:  
-- Estruturação HTML semântica.  
-- Estilização com CSS e design responsivo.  
-- Interatividade e manipulação do DOM com JavaScript.
+Requer Node.js 22 ou superior. Não é necessário `npm install`.
 
----
-
-## 📁 **Estrutura do Projeto**  
-
-### 1. **Página Pessoal**  
-- **Arquivo**: `index.html`  
-- **Descrição**:  
-   Esta é a **página principal** do projeto, funcionando como um cartão de visita. Ela apresenta informações pessoais, habilidades e serviços oferecidos.  
-- **Funcionalidades**:  
-   - **Menu de navegação** com links para as páginas de **Portfólio**, **Eventos** e **Loja**.  
-   - **Seção "Sobre Mim"** com informações detalhadas (formação, experiência e foto).  
-   - **Botões Interativos**:  
-      - "Saber Mais" redireciona para mais informações.  
-      - Link para download do **currículo**.  
-   - Links para redes sociais (**LinkedIn, GitHub e Instagram**).  
-- **Recursos Utilizados**:  
-   - HTML5 (estruturação).  
-   - CSS3 (design e responsividade).  
-   - JavaScript para o menu mobile e animações suaves.  
-
----
-
-### 2. **Portfólio de Projetos**  
-- **Arquivo**: `portifolio.html`  
-- **Descrição**:  
-   Uma página para **exibir projetos desenvolvidos**, com links diretos para visualizar e acessar o código-fonte no GitHub.  
-- **Funcionalidades**:  
-   - **Listagem de Projetos**: Cada projeto contém:  
-      - Imagem de pré-visualização.  
-      - Descrição curta do projeto.  
-      - Botões: **"Ver Projeto"** (abre a página funcional) e **"Ver Código"** (abre o repositório no GitHub).  
-   - **Animação Hover**: Destaque visual ao passar o mouse nos projetos.  
-   - **Scroll Suave** para navegação entre seções.  
-- **Projetos Listados**:  
-   1. **Landing Page Loja**  
-   2. **Sistema de Tarefas**  
-   3. **Jogo da Memória**  
-   4. **Calculadora**  
-- **Recursos Utilizados**:  
-   - HTML5 e CSS3 para estruturação e design.  
-   - JavaScript para efeitos interativos (hover e scroll).  
-
----
-
-### 3. **Página de Eventos**  
-- **Arquivo**: `evento.html`  
-- **Descrição**:  
-   Página dedicada ao evento **Song Wave**, apresentando detalhes sobre festivais musicais ao redor do mundo.  
-- **Funcionalidades**:  
-   - **Contagem Regressiva Dinâmica** até a data do evento.  
-   - **Galeria de Imagens** com efeitos de animação.  
-   - **FAQ Interativo**: Clique para expandir e visualizar as perguntas e respostas.  
-   - Seção de **Depoimentos** e **Sobre Nós**.  
-   - Links para contato via **e-mail e WhatsApp**.  
-- **Recursos Utilizados**:  
-   - JavaScript: Contagem regressiva e FAQ interativo.  
-   - CSS: Design moderno e responsivo com efeitos visuais.
-
----
-
-### 4. **Loja Virtual - Pizzaria Soberba**  
-- **Arquivo**: `loja.html`  
-- **Descrição**:  
-   Uma página para uma pizzaria fictícia, focada em reservas de mesas e exibição do cardápio.  
-- **Funcionalidades**:  
-   - **Sistema de Carrinho**:  
-      - Adição de itens ao carrinho (com alerta).  
-      - Visualização dos itens no carrinho.  
-      - Opção para limpar o carrinho.  
-   - **Seção de Produtos**: Lista de mesas disponíveis para reserva, com imagens, descrição e preços.  
-   - **Cardápio** com descrição de pizzas gourmet.  
-   - **Menu Mobile** interativo.  
-- **Recursos Utilizados**:  
-   - JavaScript: Sistema de carrinho e interatividade do menu.  
-   - CSS: Efeitos de entrada e hover, responsividade.  
-
----
-
-### 5. **Calculadora**  
-- **Arquivo**: `Calculadora.html`  
-- **Descrição**:  
-   Uma **calculadora funcional** com suporte a teclado, manipulação de parênteses e uma lógica de cálculo segura.  
-- **Funcionalidades**:  
-   - **Entrada de Valores**: Clique nos botões ou use o teclado.  
-   - **Suporte a Operadores**: Soma, subtração, multiplicação, divisão e parênteses.  
-   - **Avaliação Segura**: Utilização de `safeEval` para evitar o uso do `eval`.  
-- **Recursos Utilizados**:  
-   - JavaScript: Lógica de cálculo e manipulação de eventos de teclado.  
-   - CSS: Design moderno com botões interativos.
-
----
-
-### 6. **Jogo da Memória**  
-- **Arquivo**: `Jogo_memoria.html`  
-- **Descrição**:  
-   Um jogo interativo onde o usuário deve encontrar pares de cartas iguais.  
-- **Funcionalidades**:  
-   - **Cartas Interativas**: Clique para virar e encontrar os pares.  
-   - **Animação de Vitória**: Mensagem de parabéns ao completar o jogo.  
-   - **Reinício Automático**: O jogo reinicia ao vencer.  
-- **Recursos Utilizados**:  
-   - JavaScript: Lógica do jogo (embaralhamento, verificação e reinício).  
-   - CSS: Estilização com efeitos visuais.
-
----
-
-## 🚀 **Tecnologias Utilizadas**  
-- **HTML5**: Estruturação das páginas.  
-- **CSS3**: Estilização com design responsivo, efeitos e animações.  
-- **JavaScript**: Funcionalidades interativas e manipulação do DOM.  
-
----
-
-## 🛠️ **Como Executar o Projeto**  
-
-### Passo 1: Clone o Repositório  
-Abra o terminal e execute:  
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+```sh
+npm run dev
 ```
 
-### Passo 2: Abra no Navegador
-Abra o arquivo `index.html` diretamente ou utilize um servidor local:
-```bash
-python3 -m http.server
+Abra http://127.0.0.1:4174. Ctrl+C encerra o servidor. Para conferir exatamente o pacote de publicação, encerre o servidor de desenvolvimento e execute:
+
+```sh
+npm run build
+npm run preview
 ```
 
-### Uso
-Acesse `http://localhost:8000` (ou apenas abra `index.html`) para explorar o site.
+## Organização
+
+| Caminho | Responsabilidade |
+|---|---|
+| `index.html` | Conteúdo, destaques e catálogo pré-renderizado |
+| `assets/css/site.css` | Tokens, layout, componentes, interação e breakpoints |
+| `assets/js/navigation.js` | Menu móvel e indicação da seção atual |
+| `assets/js/catalog.js` | Busca, filtros, detalhes, modal e cópia do email |
+| `assets/js/motion.js` | Hero, cena Conexões, scroll e controle de movimento |
+| `assets/vendor/` | GSAP e ScrollTrigger 3.13.0, avisos preservados |
+| `data/projects.cjs` | Dados dos 15 projetos/grupos do catálogo |
+| `scripts/` | Geração, verificações, build seletivo e servidor local |
+| `docs/` | Escopo, decisões, validação e proveniência |
+
+Após editar os dados do catálogo, execute `npm run catalog`. Esse comando modifica somente o trecho entre os marcadores `catalog:start` e `catalog:end`. Os quatro destaques editoriais são mantidos no HTML.
+
+## Comportamento
+
+- Conteúdo e detalhes nativos permanecem disponíveis sem os scripts da página.
+- Busca e filtros não dependem das bibliotecas de animação.
+- Movimento reduzido inicia o site pausado; um controle visível permite optar por ativar ou pausar.
+- A cena Conexões usa pin apenas com pelo menos 900 × 820 px. Nos demais tamanhos mantém o fluxo de leitura.
+- Modal com foco no título, fechamento por Escape e retorno ao acionador.
+- Menu móvel com estado anunciado, Escape e fechamento após navegação.
+- Fontes usam Google Fonts com fallback de sistema. Não há vídeo decorativo, WebGL, analytics ou backend no novo portfólio.
+
+## Verificar e publicar
+
+`npm run check` confere dados, IDs, âncoras, arquivos locais e sintaxe JS. `npm run build` gera o catálogo, executa essas verificações e cria `dist/` com uma lista explícita de arquivos públicos.
+
+O workflow `.github/workflows/pages.yml` verifica pull requests e publica pushes em `main`. Antes da primeira publicação, selecione **Settings → Pages → Build and deployment → Source: GitHub Actions**. Veja a [documentação oficial de workflows do Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+Os pushes em `main` acionam o workflow de publicação no GitHub. O build publica somente `index.html`, `404.html`, `robots.txt`, `sitemap.xml` e `assets/`. A pasta `dist/` é gerada quando necessária e não deve entrar no commit.
+
+## Conteúdo e referências
+
+As imagens dos destaques são ilustrações conceituais em CSS, identificadas pelo contexto do catálogo. Não representam capturas dos produtos.
+
+O repositório contém somente o portfólio atual. Os exercícios antigos, suas mídias, o protótipo HTML da Caderneta e o currículo desatualizado foram removidos, junto com seus links. Caderneta continua no catálogo como projeto independente; seu código fica no repositório próprio.
+
+Nenhum código ou mídia dos templates proprietários estudados foi incorporado. A auditoria permanece na biblioteca de software externa. Veja [recursos de terceiros](THIRD_PARTY_NOTICES.md) e [decisões e validação](docs/DECISOES.md).
